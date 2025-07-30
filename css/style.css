@@ -11,15 +11,6 @@ body {
     justify-content: center;
 }
 
-.container {
-    max-width: 400px;
-    width: 100%;
-    padding: 30px 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 h1 {
     text-align: center;
     color: #D93D00;
@@ -70,16 +61,37 @@ p {
 
 /* Responsividade */
 @media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        margin: 20px;
-    }
-
     h1 {
         font-size: 24px;
     }
 
     .btn {
         padding: 10px;
+    }
+}
+
+/* Responsividade iPhone SE (não ligo para os outros celulares) */
+@media screen and (max-width: 768px) {
+    body .img-fluid {
+        position: fixed;
+        top: 50px;
+        left: 50%;                /* posiciona o centro no meio da tela */
+        transform: translateX(-50%); /* corrige o deslocamento */
+        max-width: 100%;          /* evita que estoure na tela */
+    }
+
+    body #container {
+        width: 100vw !important;       /* largura total da viewport */
+        max-width: 100vw !important; 
+
+        border-top-left-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+
+        position: fixed;
+        top: 280px;
+        bottom: 20px;
+        width: 100%;
     }
 }
