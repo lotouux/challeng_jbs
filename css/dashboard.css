@@ -1,0 +1,11 @@
+.top-bar {
+    background: linear-gradient(#D93D00, #ff6e35);
+}
+
+.card {
+    max-height: 600px;
+}
+
+.card canvas {
+  max-width: 100%;
+}
