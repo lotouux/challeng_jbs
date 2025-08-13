@@ -1,3 +1,7 @@
+body {
+  background: #fafafa;
+}
+
 .top-bar {
     background: linear-gradient(#D93D00, #ff6e35);
 }
@@ -7,5 +11,6 @@
 }
 
 .card canvas {
-  max-width: 100%;
+  max-height: 300px;
+  width: 100%;
 }
