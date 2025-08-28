@@ -83,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     label: 'Unidade',
                     data: [2000, 1800, 2200, 2100, 2300, 1750],
                     backgroundColor: 'rgba(217, 61, 0, 0.7)',
-                    borderColor: '#D93D00',
+                    borderWidth: 1,
+                    borderRadius: 14,
                     tension: 0.3,
                     fill: false
                 }
