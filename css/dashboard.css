@@ -251,6 +251,10 @@ body {
     justify-content: center;
 }
 
+.data-card h6 {
+    align-self: center;
+}
+
 /* ==========================
    RANKING
 ========================== */
