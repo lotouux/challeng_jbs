@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* ==========================
    RESET & BASE
 ========================== */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     background-color: #f0f2f5;
     color: #444;
 }
@@ -127,119 +129,87 @@ body {
 /* ==========================
    MÉTRICAS NUMÉRICAS
 ========================== */
+
 /* Linha com as duas colunas alinhadas */
 .row.g-4.m-2 {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    /* garante que todas as colunas tenham a mesma altura */
 }
 
 /* Card de métricas numéricas */
 .numerical-metrics-card {
     flex: 1;
-    /* ocupa toda altura da coluna */
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    /* centraliza conteúdo verticalmente */
-    align-items: stretch;
-    padding: 0.5rem;
+    align-items: center;
     background-color: transparent;
     box-shadow: none;
     border: none;
     min-height: 60px;
-    /* mesma altura que a barra de progresso base */
-}
-
-/* Métricas dentro do card */
-.metric {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 0.5rem;
-}
-
-.metric-number {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    /* espaço entre ícone e número */
-}
-
-.metric-number i {
-    font-weight: 100;
-    /* ícone mais fino */
-    color: #000;
-    /* contorno preto */
-}
-
-.metric h5 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    /* número em destaque */
-    margin: 0;
-}
-
-.metric small {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Números */
-.metric h5,
-.metric h6 {
-    font-size: 3rem;
-    font-weight: normal;
-    margin: 0;
-    line-height: 1;
-}
-
-/* Ícone + descrição */
-.metric .d-flex {
-    margin-top: auto;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Remove padding para alinhar topo com barra de progresso */
-.metrics-container,
-.numerical-metrics-card {
-    height: 60px;
     /* mesma altura da barra de progresso */
     padding: 0;
     margin: 0;
 }
 
-/* Títulos das barras */
-.progress-title {
-    margin: 0 0 5px 0;
-    font-size: 0.8rem;
-    color: #333;
-}
-
-/* Flex-grow das barras */
-.progress-wrapper {
+/* Cada métrica */
+.metric-card {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* mantém alinhado à esquerda do card */
+    gap: 0px;
+    /* controla o espaçamento entre icon-number e texto */
+    margin: -10px 15px 0 15px;
+    /* separação lateral entre cards */
+    text-align: left;
 }
 
-/* Preenchimento da barra */
-.progress-fill {
+.metric-card p {
+    margin: 0px 0 0 0 !important;
+    /* topo pequeno, só para dar uma leve distância */
+    font-size: 0.9rem;
+    width: 150px;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Ícone + número (lado a lado) */
+.metric-icon-number {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    height: 40px;
-    width: 100%;
-    transition: flex-grow 0.8s ease;
+    gap: 8px;
+    /* espaço entre ícone e número */
 }
+
+/* Ícone */
+.metric-icon-number i {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 100;
+    /* traço mais fino */
+}
+
+/* Número */
+.metric-number {
+    font-size: 2.8rem;
+    /* grande */
+    font-weight: 400;
+    /* sem negrito */
+    line-height: 1;
+    margin: 0;
+    color: #333;
+}
+
+/* Texto abaixo */
+.metric-card p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: normal;
+}
+
 
 /* ==========================
    GRÁFICOS
