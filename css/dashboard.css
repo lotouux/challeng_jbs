@@ -1,16 +1,317 @@
+/* ==========================
+   RESET & BASE
+========================== */
 body {
-  background: #fafafa;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #444;
 }
 
+/* ==========================
+   NAVBAR
+========================== */
 .top-bar {
-    background: linear-gradient(#D93D00, #ff6e35);
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.card {
-    max-height: 600px;
+.profile-photo img {
+    border: 2px solid #D93D00;
+    transition: transform 0.2s ease-in-out;
 }
 
-.card canvas {
-  max-height: 300px;
-  width: 100%;
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Links da navbar */
+.nav-link {
+    color: #444;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #D93D00;
+    color: #fff;
+}
+
+/* Container arredondado dos links */
+.nav-links-container {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+    padding: 4px;
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-links-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões arredondados */
+.btn-outline-dark {
+    color: #444;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 16px;
+    border-radius: 999px;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #D93D00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   WELCOME CARD
+========================== */
+.welcome-card {
+    background: none;
+    /* remove cor e gradiente */
+    box-shadow: none;
+    /* opcional: remove sombra se não quiser nada */
+    padding: 0;
+    /* opcional: remove padding se quiser texto colado */
+    color: #000000;
+    /* cor do texto */
+}
+
+.welcome-card h1 {
+    font-weight: 700;
+    /* negrito */
+}
+
+
+/* ==========================
+   CARDS DE MÉTRICAS
+========================== */
+.metrics-container {
+    display: flex;
+    /* barras lado a lado */
+    gap: 3px;
+    height: 60px;
+    /* altura total incluindo título */
+}
+
+.progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* título em cima da barra */
+    align-items: flex-start;
+    /* título alinhado à esquerda */
+}
+
+.progress-title {
+    margin: 0 0 5px 0;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.progress-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    transition: flex-grow 0.8s ease;
+}
+
+/* ==========================
+   MÉTRICAS NUMÉRICAS
+========================== */
+/* Linha com as duas colunas alinhadas */
+.row.g-4.m-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    /* garante que todas as colunas tenham a mesma altura */
+}
+
+/* Card de métricas numéricas */
+.numerical-metrics-card {
+    flex: 1;
+    /* ocupa toda altura da coluna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centraliza conteúdo verticalmente */
+    align-items: stretch;
+    padding: 0.5rem;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    min-height: 60px;
+    /* mesma altura que a barra de progresso base */
+}
+
+/* Métricas dentro do card */
+.metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.metric-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* espaço entre ícone e número */
+}
+
+.metric-number i {
+    font-weight: 100;
+    /* ícone mais fino */
+    color: #000;
+    /* contorno preto */
+}
+
+.metric h5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* número em destaque */
+    margin: 0;
+}
+
+.metric small {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Números */
+.metric h5,
+.metric h6 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Ícone + descrição */
+.metric .d-flex {
+    margin-top: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Remove padding para alinhar topo com barra de progresso */
+.metrics-container,
+.numerical-metrics-card {
+    height: 60px;
+    /* mesma altura da barra de progresso */
+    padding: 0;
+    margin: 0;
+}
+
+/* Títulos das barras */
+.progress-title {
+    margin: 0 0 5px 0;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Flex-grow das barras */
+.progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Preenchimento da barra */
+.progress-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    transition: flex-grow 0.8s ease;
+}
+
+/* ==========================
+   GRÁFICOS
+========================== */
+.data-card {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ==========================
+   RANKING
+========================== */
+.ranking-list img {
+    border: 2px solid #D93D00;
+}
+
+.ranking-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.ranking-list li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================
+   CONQUISTAS
+========================== */
+.achievements-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.achievement {
+    flex: 1 1 30%;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 992px) {
+
+    /* Para telas médias e pequenas */
+    .row.g-4.m-2 {
+        flex-direction: column;
+        /* empilha as colunas */
+    }
+
+    .numerical-metrics-card {
+        min-height: auto;
+        /* deixa altura natural para não cortar conteúdo */
+    }
+
+    .metric h5 {
+        font-size: 2rem;
+        /* reduz números em telas menores */
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .metric h5,
+    .metric h6 {
+        font-size: 1.5rem;
+    }
+
+    .progress-fill {
+        height: 30px;
+    }
 }
