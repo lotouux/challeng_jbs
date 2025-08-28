@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     backgroundColor: 'rgba(217, 61, 0, 0.7)',
                     borderColor: '#D93D00',
                     tension: 0.3,
-                    fill: true
+                    fill: false
                 },
                 {
                     label: 'Unidade',
@@ -69,6 +69,32 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             responsive: true,
             plugins: { legend: { position: 'bottom' } }
+        }
+    });
+
+    //Gráfico de Barras
+    const ctx3 = document.getElementById('barraChart').getContext('2d');
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+                {
+                    label: 'Unidade',
+                    data: [2000, 1800, 2200, 2100, 2300, 1750],
+                    backgroundColor: 'rgba(217, 61, 0, 0.7)',
+                    borderColor: '#D93D00',
+                    tension: 0.3,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { position: 'bottom' } },
+            scales: {
+                y: { beginAtZero: true },
+            }
         }
     });
 });
