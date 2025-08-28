@@ -84,7 +84,7 @@ body {
 }
 
 .welcome-card h1 {
-    font-weight: 700;
+    font-weight: 400;
     /* negrito */
 }
 
@@ -139,35 +139,29 @@ body {
 
 /* Card de métricas numéricas */
 .numerical-metrics-card {
-    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end !important;
     background-color: transparent;
     box-shadow: none;
     border: none;
     min-height: 60px;
     /* mesma altura da barra de progresso */
-    padding: 0;
-    margin: 0;
+    gap: 30px;
+    /* espaço entre métricas */
 }
 
 /* Cada métrica */
 .metric-card {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    gap: 6px;
     /* mantém alinhado à esquerda do card */
-    gap: 0px;
-    /* controla o espaçamento entre icon-number e texto */
-    margin: -10px 15px 0 15px;
-    /* separação lateral entre cards */
-    text-align: left;
 }
 
 .metric-card p {
-    margin: 0px 0 0 0 !important;
+    margin: -10px 0 0 0 !important;
     /* topo pequeno, só para dar uma leve distância */
     font-size: 0.9rem;
     width: 150px;
@@ -178,17 +172,15 @@ body {
 /* Ícone + número (lado a lado) */
 .metric-icon-number {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-end;
+    gap: 6px;
     /* espaço entre ícone e número */
 }
 
 /* Ícone */
 .metric-icon-number i {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #000;
-    font-weight: 100;
-    /* traço mais fino */
 }
 
 /* Número */
@@ -196,19 +188,103 @@ body {
     font-size: 2.8rem;
     /* grande */
     font-weight: 400;
+    color: #333;
     /* sem negrito */
     line-height: 1;
-    margin: 0;
-    color: #333;
 }
 
 /* Texto abaixo */
 .metric-card p {
-    margin-top: 6px;
+    margin-top: 0px;
     font-size: 0.9rem;
     color: #666;
-    font-weight: normal;
+    font-weight: 400 !important;
+    white-space: nowrap;
+    text-align: center;
 }
+
+/* ==========================
+   RANKING
+========================== */
+/* Card de ranking */
+.ranking-card {
+    border: none;
+    background-color: #cecece;
+    box-shadow: none
+}
+
+/* Cabeçalho */
+.ranking-card .card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Container do pódio de fotos */
+.photo-podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    margin-top: 15px;
+    position: relative;
+}
+
+/* Cada posição */
+.podium-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Fotos */
+.podium-photo {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Tamanhos diferentes */
+.podium-place.first .podium-photo {
+    width: 100px;
+    height: 100px;
+}
+
+.podium-place.second .podium-photo,
+.podium-place.third .podium-photo {
+    width: 70px;
+    height: 70px;
+}
+
+/* Número da posição */
+.position-number {
+    position: absolute;
+    top: -15px;
+    font-weight: bold;
+    background-color: #D93D00;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* Nome do jogador */
+.player-name {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.player-points {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
 
 
 /* ==========================
@@ -223,36 +299,6 @@ body {
 
 .data-card h6 {
     align-self: center;
-}
-
-/* ==========================
-   RANKING
-========================== */
-.ranking-list img {
-    border: 2px solid #D93D00;
-}
-
-.ranking-list li {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.ranking-list li:last-child {
-    border-bottom: none;
-}
-
-/* ==========================
-   CONQUISTAS
-========================== */
-.achievements-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.achievement {
-    flex: 1 1 30%;
 }
 
 /* ==========================

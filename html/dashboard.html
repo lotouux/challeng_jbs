@@ -71,17 +71,17 @@
 
           <div class="progress-wrapper" style="flex-grow: 15;">
             <h6 class="progress-title">Vendas</h6>
-            <div class="progress-fill" style="background-color: #fd7c49;">15%</div>
+            <div class="progress-fill" style="background-color: #FA7343;">15%</div>
           </div>
 
           <div class="progress-wrapper" style="flex-grow: 56;">
             <h6 class="progress-title">Marketing</h6>
-            <div class="progress-fill" style="background-color: #cf5524;">56%</div>
+            <div class="progress-fill" style="background-color: #363636;">56%</div>
           </div>
 
           <div class="progress-wrapper" style="flex-grow: 95;">
             <h6 class="progress-title">Suporte</h6>
-            <div class="progress-fill" style="background-color: #ffb89d;">95%</div>
+            <div class="progress-fill" style="background-color: #8f8f8f;">95%</div>
           </div>
 
         </div>
@@ -89,7 +89,7 @@
 
       <!-- Card com Métricas Numéricas -->
       <div class="col-lg-6">
-        <div class="card numerical-metrics-card rounded-4">
+        <div class="numerical-metrics-card">
           <div class="d-flex">
 
             <!-- Ex.: Total de Pontos -->
@@ -98,7 +98,7 @@
                 <i class="bi bi-trophy"></i>
                 <span class="metric-number">350</span>
               </div>
-              <p>Total de pontos</p>
+              <p class="metric-label">Pontuação</p>
             </div>
 
             <div class="metric-card">
@@ -106,7 +106,7 @@
                 <i class="bi bi-clipboard2-check"></i>
                 <span class="metric-number">85</span>
               </div>
-              <p>Tarefas concluídas</p>
+              <p class="metric-label">Concluídas</p>
             </div>
 
             <div class="metric-card">
@@ -114,89 +114,95 @@
                 <i class="bi bi-star"></i>
                 <span class="metric-number">4.8</span>
               </div>
-              <p>Média de avaliações</p>
+              <p class="metric-label">Média</p>
             </div>
 
-          </div>
-        </div>
-      </div>
-
-      <!-- Cards de Gráficos -->
-      <div class="col-lg-6">
-        <div class="card data-card shadow-sm rounded-4 p-4">
-          <h6>Vendas R$/Unidades</h6>
-          <canvas id="linhaChart" height="250"></canvas>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
-          <h6>Categorias de Produtos Vendidos</h6>
-          <canvas id="donutChart" height="250"></canvas>
-        </div>
-      </div>
-
-      <!-- Novo Card: Gráfico de Barra -->
-      <div class="col-lg-6">
-        <div class="card data-card shadow-sm rounded-4 p-4">
-          <h6>Vendas Mensais (Unidades)</h6>
-          <canvas id="barraChart" height="250"></canvas>
-        </div>
-      </div>
-
-      <!-- Novo Card: Conquistas -->
-      <div class="col-lg-6">
-        <div class="card data-card shadow-sm rounded-4 p-4">
-          <h6 class="mb-4">Suas Conquistas</h6>
-          <div class="achievements-grid">
-            <div class="achievement text-center">
-              <i class="fas fa-star fa-2x text-warning mb-2"></i>
-              <p class="mb-0">Astro da Venda</p>
-            </div>
-            <div class="achievement text-center">
-              <i class="fas fa-trophy fa-2x text-info mb-2"></i>
-              <p class="mb-0">Mestre da Meta</p>
-            </div>
-            <div class="achievement text-center">
-              <i class="fas fa-medal fa-2x text-secondary mb-2"></i>
-              <p class="mb-0">Primeira Semana</p>
-            </div>
           </div>
         </div>
       </div>
 
       <!-- Card de Ranking -->
-      <div class="col-lg-12">
-        <div class="card ranking-card shadow-sm rounded-4 p-4">
-          <h6 class="mb-4">Ranking Semanal</h6>
-          <ul class="list-unstyled ranking-list">
-            <li class="d-flex align-items-center mb-3">
-              <img src="https://i.pravatar.cc/150?img=1" alt="Usuário 1" class="rounded-circle me-3"
-                style="width: 50px; height: 50px;">
-              <div>
-                <h5 class="mb-0 fw-bold">1. Ana Silva <i class="fas fa-crown text-warning"></i></h5>
-                <small class="text-muted">320pts</small>
+      <div class="row g-4 mt-3">
+        <div class="col-lg-3">
+          <div class="card ranking-card rounded-4 p-3">
+            <div class="card-body">
+              <div class="photo-podium">
+                <!-- Terceiro Lugar -->
+                <div class="podium-place third">
+                  <div class="position-number">3º</div>
+                  <img src="https://i.pravatar.cc/100" alt="3º Lugar" class="podium-photo">
+                  <div class="player-name">Carla</div>
+                  <div class="player-points">120 pts</div>
+                </div>
+
+                <!-- Primeiro Lugar -->
+                <div class="podium-place first">
+                  <div class="position-number">1º</div>
+                  <img src="https://i.pravatar.cc/400" alt="1º Lugar" class="podium-photo">
+                  <div class="player-name">Bruno</div>
+                  <div class="player-points">120 pts</div>
+                </div>
+
+                <!-- Segundo Lugar -->
+                <div class="podium-place second">
+                  <div class="position-number">2º</div>
+                  <img src="https://i.pravatar.cc/300" alt="2º Lugar" class="podium-photo">
+                  <div class="player-name">Alice</div>
+                  <div class="player-points">120 pts</div>
+                </div>
               </div>
-            </li>
-            <li class="d-flex align-items-center mb-3">
-              <img src="https://i.pravatar.cc/150?img=2" alt="Usuário 2" class="rounded-circle me-3"
-                style="width: 50px; height: 50px;">
-              <div>
-                <h5 class="mb-0 fw-bold">2. Bruno Costa</h5>
-                <small class="text-muted">300pts</small>
-              </div>
-            </li>
-            <li class="d-flex align-items-center mb-3">
-              <img src="https://i.pravatar.cc/150?img=3" alt="Usuário 3" class="rounded-circle me-3"
-                style="width: 50px; height: 50px;">
-              <div>
-                <h5 class="mb-0 fw-bold">3. Carlos Martins</h5>
-                <small class="text-muted">280pts</small>
-              </div>
-            </li>
-          </ul>
+              <!-- Texto Ranking -->
+              <div class="ranking-title">Ranking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de Ranking -->
+        <div class="col-lg-3">
+          <div class="card new-metric-card rounded-4 p-4">
+            <div class="card-header">
+              Conquistas
+            </div>
+            <div class="card-body">
+              <p>"texto"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card motivacional -->
+        <div class="col-lg-6">
+          <div class="card motivational-card rounded-4 p-4">
+            <div class="card-header">
+              Card motivacional
+            </div>
+            <div class="card-body">
+              <p>"texto"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards de Gráficos -->
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4">
+            <h6>Vendas R$/Unidades</h6>
+            <canvas id="linhaChart" height="250"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
+            <h6>Categorias de Produtos Vendidos</h6>
+            <canvas id="donutChart" height="250"></canvas>
+          </div>
+        </div>
+
+        <!-- Novo Card: Gráfico de Barra -->
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4">
+            <h6>Vendas Mensais (Unidades)</h6>
+            <canvas id="barraChart" height="250"></canvas>
+          </div>
         </div>
       </div>
-    </div>
   </main>
 
   <!-- JavaScript-->
