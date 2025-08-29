@@ -5,7 +5,7 @@
 ========================== */
 body {
     font-family: 'Poppins', sans-serif !important;
-    background: #ebdfd5;
+    background: #ffe5da;
     color: #444;
 }
 
@@ -267,6 +267,69 @@ body {
 
 .topic i {
     font-size: 1.3rem;
+}
+
+/* ==========================
+    CONQUISTAS
+========================== */
+.achievements-card {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: none;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 463px;
+    cursor: pointer;
+}
+
+.achievements-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.achievements-title {
+    color: #D93D00;
+    font-weight: bold;
+}
+
+.achievements-list .achievement {
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.achievement-title {
+    font-weight: 600;
+    color: #444;
+}
+
+.achievement-status {
+    font-size: 0.85rem;
+}
+
+.icon-box.bg-warning {
+    background-color: #D96300 !important; 
+}
+
+.icon-box.bg-primary {
+    background-color: #D93D00 !important; 
+}
+
+.icon-box.bg-danger {
+    background-color: #D90032 !important;
+}
+
+.icon-box.bg-success {
+    background-color: #D98600 !important;
 }
 
 
