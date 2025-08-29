@@ -15,7 +15,8 @@ body {
 .top-bar {
     background-color: transparent;
     box-shadow: none;
-    margin-bottom: -30px; /* Reduz ou remove a margem inferior */
+    margin-bottom: -30px;
+    /* Reduz ou remove a margem inferior */
 }
 
 .profile-photo img {
@@ -342,15 +343,9 @@ body {
     border: none;
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
     margin: auto;
-    border-radius: 12px; /* Adiciona o mesmo border-radius dos outros cards */
+    border-radius: 12px;
     height: 100%;
-}
-
-.ranking-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .ranking-title {
@@ -402,13 +397,7 @@ body {
     border: none;
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
     height: 100%;
-}
-
-.voting-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .voting-title {
@@ -428,22 +417,36 @@ body {
 
 .vote-item {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.btn-vote {
-    background-color: #D93D00;
-    color: #fff;
-    border: none;
-    transition: all 0.2s ease-in-out;
+.progress-bar {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
 }
 
-.btn-vote:hover {
-    background-color: #b73200;
+.vote-item span {
+    flex-basis: 150px;
+    text-align: left;
+}
+
+.vote-item .progress {
+    margin-bottom: 0;
+}
+
+.progress-bar {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 25px;
+}
+
+.vote-progress-container {
+    padding-top: 15px;
 }
 
 /* ==========================
