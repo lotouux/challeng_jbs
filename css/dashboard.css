@@ -5,7 +5,7 @@
 ========================== */
 body {
     font-family: 'Poppins', sans-serif !important;
-    background: radial-gradient(circle at top left, #ffffff, #fcc3ad);
+    background: #ebdfd5;
     color: #444;
 }
 
@@ -43,7 +43,7 @@ body {
 /* Container arredondado dos links */
 .nav-links-container {
     border: none;
-    background-color: rgba(255, 255, 255, 0.479);
+    background-color: rgba(255, 255, 255, 0.589);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
     border-radius: 999px;
     padding: 4px;
@@ -56,7 +56,7 @@ body {
 
 /* Botões arredondados */
 .btn-outline-dark {
-    background-color: rgba(255, 255, 255, 0.479);
+    background-color: rgba(255, 255, 255, 0.589);
     color: #444;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
@@ -67,7 +67,7 @@ body {
 }
 
 .btn-outline-dark:hover {
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(255, 255, 255, 0.589);
     color: #fff;
     background-color: #D93D00;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02);
@@ -77,7 +77,7 @@ body {
    MAIN PROFILE CARD & WELCOME
 ========================== */
 .profile-card{
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(255, 255, 255, 0.589);
     box-shadow: none;
     transition: transform 0.2s ease-in-out;
     max-height: 400px;
@@ -184,7 +184,7 @@ body {
 ========================== */
 
 .info-card {
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(255, 255, 255, 0.589);
     border: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
@@ -222,82 +222,147 @@ body {
     margin: auto;
     
 }
+
+/* ==========================
+   CARD MOTIVACIONAL
+========================== */
+.motivational-card {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: none;
+    padding: 20px;
+}
+
+.motivational-title {
+    font-weight: bold;
+    color: #D93D00;
+}
+
+.motivational-subtitle {
+    font-weight: 600;
+    color: #333;
+}
+
+.motivational-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.topic {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.topic.good {
+    background-color: #ffdacb; /* verde claro */
+    color: #572a15;
+}
+
+.topic.to-improve {
+    background-color: rgb(250, 192, 184); /* amarelo claro */
+    color: #852904;
+}
+
+.topic i {
+    font-size: 1.3rem;
+}
+
+
 /* ==========================
    RANKING
 ========================== */
 /* Card de ranking */
 .ranking-card {
-    background-color: rgba(255, 255, 255, 0.61);
+    background-color: rgba(255, 255, 255, 0.589);
     border: none;
-    padding: 12px;
+    padding: 15px;
 }
 
+/* Título */
+.ranking-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Podium */
 .photo-podium {
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* usa toda a largura */
     align-items: flex-end;
-    gap: 30px; /* espaço entre os três lugares */
+    gap: 60px; /* aumenta o espaço entre os lugares */
 }
 
-/* Tamanhos do podium */
+/* Cada lugar */
+.podium-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ordem e altura do podium */
 .podium-place.first {
-    order: 2;               /* centralizar no meio */
-    transform: rotateY(0);
+    order: 2;
+    transform: translateY(0); /* mais alto */
 }
 .podium-place.second {
-    order: 3;               /* esquerda */
-    transform: translateY(20px); /* mais baixo que o primeiro */
+    order: 1;
+    transform: translateY(20px); /* menor que o primeiro */
 }
 .podium-place.third {
-    order: 1;               /* direita */
-    transform: translateY(20px);
+    order: 3;
+    transform: translateY(20px); /* menor que o primeiro */
 }
 
-.position-number {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-}
-
+/* Fotos */
 .podium-photo {
-    width: 70px;
-    height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #D93D00; /* contorno da foto */
+    border: 4px solid #D93D00;
     margin-bottom: 5px;
 }
-
 .podium-place.first .podium-photo {
     width: 120px;
     height: 120px;
 }
-
 .podium-place.second .podium-photo,
-.podium-place.third .podium-photo{
+.podium-place.third .podium-photo {
     width: 90px;
     height: 90px;
 }
 
+/* Texto */
+.position-number {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
 .player-name {
     font-weight: 600;
     font-size: 1rem;
     color: #444;
-    margin: auto;
 }
-
 .player-points {
     font-size: 0.9rem;
     color: #666;
-    margin: auto;
 }
 
-.ranking-title {
-    text-align: start;
-    font-weight: bold;
-    font-size: 1rem;
-    margin: auto;
+.podium-place::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #D93D00;
+    margin-top: 5px;
+    border-radius: 4px;
 }
+.podium-place.first::after { height: 40px; } /* pedestal maior para o 1º */
+
+
 /* ==========================
    GRÁFICOS
 ========================== */

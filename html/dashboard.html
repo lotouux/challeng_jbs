@@ -54,8 +54,8 @@
   </nav>
 
   <!-- Conteúdo principal -->
-  <main class="container-fluid mt-4">
-    <div class="row g-4 m-2">
+  <main class="container-fluid mt-2">
+    <div class="row g-4 m-1">
       <div class="col-lg-12">
         <div class="profile-card d-flex align-items-center p-4 rounded-4">
 
@@ -113,7 +113,7 @@
     </div>
 
     <!-- Linha de cards -->
-    <div class="row g-3 m-4">
+    <div class="row g-3 m-1">
       <!-- Ranking -->
       <div class="col-md-4">
         <div class="info-card p-3 rounded-4 d-flex align-items-center">
@@ -154,18 +154,56 @@
       </div>
     </div>
 
-    <div class="row g-4 m-2">
+    <div class="row g-4 m-1">
+      <!-- Card Motivacional -->
+      <div class="col-lg-8">
+        <div class="card motivational-card rounded-4 p-4">
+          <h4 class="motivational-title mb-3 text-center">Dicas de Performance</h4>
+
+          <!-- Tópico Bom -->
+          <div class="topic good mb-3">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Atendimento ao cliente exemplar
+          </div>
+          <h5 class="motivational-subtitle mb-2">Continue evoluindo!</h5>
+          <p class="motivational-text mb-3">
+            Cada ponto conquistado te aproxima do topo. Não desista, mantenha o foco nas metas e veja sua performance
+            crescer!
+          </p>
+
+          <!-- Tópicos a melhorar -->
+          <div class="topic to-improve mb-2">
+            <i class="bi bi-exclamation-circle-fill me-2"></i>
+            Aumentar a taxa de conversão de vendas
+          </div>
+          <div class="topic to-improve mb-2">
+            <i class="bi bi-exclamation-circle-fill me-2"></i>
+            Melhorar o tempo de resposta aos clientes
+          </div>
+          <div class="topic to-improve mb-3">
+            <i class="bi bi-exclamation-circle-fill me-2"></i>
+            Participar mais ativamente das missões semanais
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-outline-dark">Ver Dicas de Melhoria</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row g-4 m-1">
       <!-- Card de Ranking -->
       <div class="col-lg-8">
-        <div class="card ranking-card rounded-4 p-2">
-          <div class="card-body p-2">
-            <!-- Texto Ranking -->
+        <div class="card ranking-card rounded-4 p-4">
+          <div class="card-body">
             <div class="ranking-title">Ranking</div>
             <div class="photo-podium">
               <!-- Segundo Lugar -->
-              <div class="podium-place third">
+              <div class="podium-place second">
                 <div class="position-number">2º</div>
-                <img src="https://i.pravatar.cc/100" alt="3º Lugar" class="podium-photo">
+                <img src="https://i.pravatar.cc/100" alt="2º Lugar" class="podium-photo">
                 <div class="player-name">Carla</div>
                 <div class="player-points">120 pts</div>
               </div>
@@ -175,34 +213,36 @@
                 <div class="position-number">1º</div>
                 <img src="https://i.pravatar.cc/400" alt="1º Lugar" class="podium-photo">
                 <div class="player-name">Bruno</div>
-                <div class="player-points">120 pts</div>
+                <div class="player-points">150 pts</div>
               </div>
 
               <!-- Terceiro Lugar -->
-              <div class="podium-place second">
+              <div class="podium-place third">
                 <div class="position-number">3º</div>
-                <img src="https://i.pravatar.cc/300" alt="2º Lugar" class="podium-photo">
+                <img src="https://i.pravatar.cc/300" alt="3º Lugar" class="podium-photo">
                 <div class="player-name">Alice</div>
-                <div class="player-points">120 pts</div>
+                <div class="player-points">100 pts</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Card de Conquistas -->
-      <div class="col-lg-3">
-        <div class="card new-metric-card rounded-4 p-4">
-          <div class="card-header">
-            Conquistas
-          </div>
-          <div class="card-body">
-            <p>"texto"</p>
-          </div>
+
+    <!-- Card de Conquistas -->
+    <div class="col-lg-3">
+      <div class="card new-metric-card rounded-4 p-4">
+        <div class="card-header">
+          Conquistas
+        </div>
+        <div class="card-body">
+          <p>"texto"</p>
         </div>
       </div>
-      <!-- JavaScript-->
-      <script src="../js/dashboard.js"></script>
+    </div>
+    <!-- JavaScript-->
+    <script src="../js/dashboard.js"></script>
 </body>
 </main>
 
