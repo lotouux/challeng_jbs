@@ -5,7 +5,7 @@
 ========================== */
 body {
     font-family: 'Poppins', sans-serif !important;
-    background: linear-gradient(410deg, #fff 40%, #fde2c8 110%);
+    background: #D93D00;
     color: #444;
 }
 
@@ -31,6 +31,7 @@ body {
     color: #444;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
+    box-shadow: none;
 }
 
 .nav-link:hover,
@@ -43,14 +44,14 @@ body {
 .nav-links-container {
     border: none;
     background-color: rgba(255, 255, 255, 0.479);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
     border-radius: 999px;
     padding: 4px;
     transition: box-shadow 0.3s ease;
 }
 
 .nav-links-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Botões arredondados */
@@ -58,7 +59,7 @@ body {
     background-color: rgba(255, 255, 255, 0.479);
     color: #444;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     padding: 8px 16px;
@@ -69,63 +70,31 @@ body {
     background-color: rgba(255, 255, 255, 0.479);
     color: #fff;
     background-color: #D93D00;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02);
 }
 
 /* ==========================
-   WELCOME CARD
+   MAIN PROFILE CARD & WELCOME
 ========================== */
-.welcome-card {
-    background: none;
-    /* remove cor e gradiente */
-    box-shadow: none;
-    /* opcional: remove sombra se não quiser nada */
-    padding: 0;
-    /* opcional: remove padding se quiser texto colado */
-    color: #000000;
-    /* cor do texto */
-}
-
-.welcome-card h1 {
-    font-weight: 400;
-    /* negrito */
-}
-
-
-/* ==========================
-   CARDS DE MÉTRICAS
-========================== */
-.metrics-container {
-    display: flex;
-    /* barras lado a lado */
-    gap: 3px;
-    height: 60px;
-    /* altura total incluindo título */
-}
-
-.progress-wrapper {
-    display: flex;
-    flex-direction: column;
-    /* título em cima da barra */
-    align-items: flex-start;
-    /* título alinhado à esquerda */
-}
-
-.progress-title {
-    margin: 0 0 5px 0;
-    font-size: 0.8rem;
-    color: #333;
-}
-
-.progress-fill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+.profile-card{
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
-    height: 40px;
-    width: 100%;
-    transition: flex-grow 0.8s ease;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out;
+    max-height: 400px;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo-large img {
+    transition: transform 0.2s ease;
+}
+
+.profile-photo-large img:hover {
+    transform: scale(1.05);
 }
 
 /* ==========================
