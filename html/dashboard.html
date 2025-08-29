@@ -47,7 +47,7 @@
       </a>
 
       <div class="profile-photo">
-        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Foto de Perfil"
+        <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
           class="img-fluid rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
       </div>
     </div>
@@ -61,7 +61,7 @@
 
           <!-- Foto -->
           <div class="profile-photo-large me-3">
-            <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Foto de Perfil" class="img-fluid rounded-4"
+            <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil" class="img-fluid rounded-4"
               style="width: 300px; height: 200px; object-fit: cover;">
           </div>
 
@@ -305,8 +305,8 @@
                 <div class="vote-item d-flex align-items-center mb-3">
                   <span class="fw-bold me-3">Viagem Nacional</span>
                   <div class="progress w-100" style="height: 25px;">
-                    <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #D98600;" aria-valuenow="75"
-                      aria-valuemin="0" aria-valuemax="100">75%</div>
+                    <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #D98600;"
+                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                   </div>
                 </div>
                 <div class="vote-item d-flex align-items-center mb-3">
@@ -334,37 +334,35 @@
         </div>
       </div>
 
+      <!-- Cards de Gráficos -->
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4 w-100 h-100">
+            <h5>Vendas R$/Unidades</h5>
+            <canvas id="linhaChart" height="250"></canvas>
+          </div>
+        </div>
 
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4 w-100 h-100">
+            <h5>Vendas mensais (unidades)</h5>
+            <canvas id="barraChart" height="250"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-lg-6">
+          <div class="card data-card shadow-sm rounded-4 p-4 w-100 h-100">
+            <h5>Categorias de Produtos Vendido</h5>
+            <canvas id="donutChart" height="250"></canvas>
+          </div>
+        </div>
+      </div>
       <!-- JavaScript-->
       <script src="../js/dashboard.js"></script>
+
 </body>
 </main>
-
-
-<!-- Cards de Gráficos -->
-<div class="col-lg-6">
-  <div class="card data-card shadow-sm rounded-4 p-4">
-    <h6>Vendas R$/Unidades</h6>
-    <canvas id="linhaChart" height="250"></canvas>
-  </div>
-</div>
-<div class="col-lg-6">
-  <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
-    <h6>Categorias de Produtos Vendidos</h6>
-    <canvas id="donutChart" height="250"></canvas>
-  </div>
-</div>
-
-<!-- Novo Card: Gráfico de Barra -->
-<div class="col-lg-6">
-  <div class="card data-card shadow-sm rounded-4 p-4">
-    <h6>Vendas Mensais (Unidades)</h6>
-    <canvas id="barraChart" height="250"></canvas>
-  </div>
-</div>
-</div>
-</main>
-
-
 
 </html>
