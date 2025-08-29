@@ -15,6 +15,7 @@ body {
 .top-bar {
     background-color: transparent;
     box-shadow: none;
+    margin-bottom: -30px; /* Reduz ou remove a margem inferior */
 }
 
 .profile-photo img {
@@ -50,10 +51,6 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.nav-links-container:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
 /* Botões arredondados */
 .btn-outline-dark {
     background-color: rgba(255, 255, 255, 0.589);
@@ -76,7 +73,7 @@ body {
 /* ==========================
    MAIN PROFILE CARD & WELCOME
 ========================== */
-.profile-card{
+.profile-card {
     background-color: rgba(255, 255, 255, 0.589);
     box-shadow: none;
     transition: transform 0.2s ease-in-out;
@@ -137,8 +134,10 @@ body {
     stroke: #D93D00;
     stroke-width: 12;
     stroke-linecap: round;
-    stroke-dasharray: 439; /* Circunferência do círculo (2 * π * r) */
-    stroke-dashoffset: calc(439 - (370 / 1700) * 439); /* Começa com o círculo vazio */
+    stroke-dasharray: 439;
+    /* Circunferência do círculo (2 * π * r) */
+    stroke-dashoffset: calc(439 - (370 / 1700) * 439);
+    /* Começa com o círculo vazio */
     transition: stroke-dashoffset 1s ease;
 }
 
@@ -220,7 +219,7 @@ body {
     font-size: 23px;
     color: #fff;
     margin: auto;
-    
+
 }
 
 /* ==========================
@@ -256,12 +255,14 @@ body {
 }
 
 .topic.good {
-    background-color: #ffdacb; /* verde claro */
+    background-color: #fdcfaa;
+    /* verde claro */
     color: #572a15;
 }
 
 .topic.to-improve {
-    background-color: rgb(250, 192, 184); /* amarelo claro */
+    background-color: #fdc2ab;
+    /* amarelo claro */
     color: #852904;
 }
 
@@ -294,7 +295,7 @@ body {
 .achievements-list .achievement {
     padding: 10px;
     border-radius: 12px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .icon-box {
@@ -317,11 +318,11 @@ body {
 }
 
 .icon-box.bg-warning {
-    background-color: #D96300 !important; 
+    background-color: #D96300 !important;
 }
 
 .icon-box.bg-primary {
-    background-color: #D93D00 !important; 
+    background-color: #D93D00 !important;
 }
 
 .icon-box.bg-danger {
@@ -334,97 +335,116 @@ body {
 
 
 /* ==========================
-   RANKING
+   Ranking / Pódio
 ========================== */
-/* Card de ranking */
 .ranking-card {
     background-color: rgba(255, 255, 255, 0.589);
     border: none;
-    padding: 15px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 12px; /* Adiciona o mesmo border-radius dos outros cards */
+    height: 100%;
 }
 
-/* Título */
+.ranking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
 .ranking-title {
+    color: #D93D00 !important;
     font-weight: bold;
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 15px;
 }
 
-/* Podium */
-.photo-podium {
-    display: flex;
-    justify-content: space-around; /* usa toda a largura */
-    align-items: flex-end;
-    gap: 60px; /* aumenta o espaço entre os lugares */
+.bi-trophy-fill {
+    color: #ffffff !important;
 }
 
-/* Cada lugar */
-.podium-place {
+.bi-trophy {
+    color: #ffffff !important;
+}
+
+.position-box {
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.position-box.first {
+    background: linear-gradient(135deg, #D96300, #D98600);
+    box-shadow: 0 6px 15px rgba(217, 99, 0, 0.4);
+    transform: translateY(-10px) scale(1.1);
+    z-index: 2;
+}
+
+.position-box.second {
+    background: linear-gradient(135deg, #D90032, #D93D00);
+    box-shadow: 0 4px 10px rgba(217, 0, 50, 0.2);
+}
+
+.position-box.third {
+    background: linear-gradient(135deg, #D93D00, #D96300);
+    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2);
+}
+
+.podium {
+    margin-top: 20px;
+}
+
+
+/* ==========================
+   CARD DE VOTAÇÃO
+========================== */
+.voting-card {
+    background-color: rgba(255, 255, 255, 0.589);
+    border: none;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.voting-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.voting-title {
+    color: #D93D00 !important;
+    font-weight: bold;
+}
+
+.voting-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.vote-options {
+    text-align: left;
+}
+
+.vote-item {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Ordem e altura do podium */
-.podium-place.first {
-    order: 2;
-    transform: translateY(0); /* mais alto */
-}
-.podium-place.second {
-    order: 1;
-    transform: translateY(20px); /* menor que o primeiro */
-}
-.podium-place.third {
-    order: 3;
-    transform: translateY(20px); /* menor que o primeiro */
-}
-
-/* Fotos */
-.podium-photo {
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #D93D00;
-    margin-bottom: 5px;
-}
-.podium-place.first .podium-photo {
-    width: 120px;
-    height: 120px;
-}
-.podium-place.second .podium-photo,
-.podium-place.third .podium-photo {
-    width: 90px;
-    height: 90px;
-}
-
-/* Texto */
-.position-number {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-.player-name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #444;
-}
-.player-points {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.podium-place::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 20px;
+.btn-vote {
     background-color: #D93D00;
-    margin-top: 5px;
-    border-radius: 4px;
+    color: #fff;
+    border: none;
+    transition: all 0.2s ease-in-out;
 }
-.podium-place.first::after { height: 40px; } /* pedestal maior para o 1º */
 
+.btn-vote:hover {
+    background-color: #b73200;
+}
 
 /* ==========================
    GRÁFICOS

@@ -47,21 +47,21 @@
       </a>
 
       <div class="profile-photo">
-        <img src="https://i.pravatar.cc/300" alt="Foto de Perfil" class="img-fluid rounded-circle"
-          style="width: 40px; height: 40px; object-fit: cover;">
+        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Foto de Perfil"
+          class="img-fluid rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
       </div>
     </div>
   </nav>
 
   <!-- Conteúdo principal -->
-  <main class="container-fluid mt-2">
+  <main class="container-fluid mt-1">
     <div class="row g-4 m-1">
       <div class="col-lg-12">
         <div class="profile-card d-flex align-items-center p-4 rounded-4">
 
           <!-- Foto -->
           <div class="profile-photo-large me-3">
-            <img src="https://i.pravatar.cc/300" alt="Foto de Perfil" class="img-fluid rounded-4"
+            <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Foto de Perfil" class="img-fluid rounded-4"
               style="width: 300px; height: 200px; object-fit: cover;">
           </div>
 
@@ -122,7 +122,7 @@
           </div>
           <div>
             <h6 class="info-title mb-1">Posição no Ranking</h6>
-            <p class="mb-0 fw-bold">3º Lugar</p>
+            <p class="mb-0 fw-bold">46º Lugar</p>
           </div>
         </div>
       </div>
@@ -238,74 +238,92 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="row g-4 m-1">
-      <!-- Card de Ranking -->
-      <div class="col-lg-8">
-        <div class="card ranking-card rounded-4 p-4">
-          <div class="card-body">
-            <div class="ranking-title">Ranking</div>
-            <div class="photo-podium">
-              <!-- Segundo Lugar -->
-              <div class="podium-place second">
-                <div class="position-number">2º</div>
-                <img src="https://i.pravatar.cc/100" alt="2º Lugar" class="podium-photo">
-                <div class="player-name">Carla</div>
-                <div class="player-points">120 pts</div>
-              </div>
 
-              <!-- Primeiro Lugar -->
-              <div class="podium-place first">
-                <div class="position-number">1º</div>
-                <img src="https://i.pravatar.cc/400" alt="1º Lugar" class="podium-photo">
-                <div class="player-name">Bruno</div>
-                <div class="player-points">150 pts</div>
+      <div class="col-lg-6 d-flex">
+        <div class="card ranking-card rounded-4 p-4 text-center w-100 h-100">
+          <h4 class="ranking-title mb-4 fw-bold text-primary">
+            <i class="bi bi-bar-chart-fill me-2"></i> Ranking - Top 3
+          </h4>
+          <div class="row justify-content-center align-items-end podium">
+            <div class="col-4">
+              <div class="position-box second rounded-4 p-3">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-2" width="80"
+                  height="80" alt="2º Lugar">
+                <h6 class="fw-bold">2º Lugar</h6>
+                <i class="bi bi-trophy text-secondary fs-3"></i>
+                <p class="mt-2 mb-0">Maria</p>
+                <small class="fw-bold">1450 pts</small>
               </div>
-
-              <!-- Terceiro Lugar -->
-              <div class="podium-place third">
-                <div class="position-number">3º</div>
-                <img src="https://i.pravatar.cc/300" alt="3º Lugar" class="podium-photo">
-                <div class="player-name">Alice</div>
-                <div class="player-points">100 pts</div>
+            </div>
+            <div class="col-4">
+              <div class="position-box first rounded-4 p-3">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-2" width="100"
+                  height="100" alt="1º Lugar">
+                <h6 class="fw-bold">1º Lugar</h6>
+                <i class="bi bi-trophy-fill text-warning fs-3"></i>
+                <p class="mt-2 mb-0">João</p>
+                <small class="fw-bold">1675 pts</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="position-box third rounded-4 p-3">
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" class="rounded-circle mb-2" width="80"
+                  height="80" alt="3º Lugar">
+                <h6 class="fw-bold">3º Lugar</h6>
+                <i class="bi bi-trophy text-warning fs-3"></i>
+                <p class="mt-2 mb-0">Carlos</p>
+                <small class="fw-bold">1320 pts</small>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-
-    <!-- Card de Conquistas -->
-    <div class="col-lg-3">
-      <div class="card new-metric-card rounded-4 p-4">
-        <div class="card-header">
-          Conquistas
-        </div>
-        <div class="card-body">
-          <p>"texto"</p>
+      <div class="col-lg-6 d-flex">
+        <div class="card voting-card rounded-4 p-4 text-center w-100 h-100">
+          <h4 class="voting-title mb-4 fw-bold text-primary">
+            <i class="bi bi-award-fill me-2"></i> Prêmios mais Votados
+          </h4>
+          <p class="voting-text">
+            Veja quais prêmios estão ganhando a corrida! Participe da votação no formulário para que o seu favorito suba
+            no ranking.
+          </p>
+          <div class="vote-progress-container mt-4">
+            <div class="vote-item d-flex align-items-center mb-3">
+              <span class="fw-bold me-3">Viagem Nacional</span>
+              <div class="progress w-100" style="height: 25px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100">75%</div>
+              </div>
+            </div>
+            <div class="vote-item d-flex align-items-center mb-3">
+              <span class="fw-bold me-3">Notebook</span>
+              <div class="progress w-100" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #D93D00;"
+                  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+              </div>
+            </div>
+            <div class="vote-item d-flex align-items-center mb-3">
+              <span class="fw-bold me-3">Curso Profissional</span>
+              <div class="progress w-100" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #D90032;"
+                  aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <a href="#" class="btn btn-profile w-100">
+            Acessar Formulário de Votação
+          </a>
         </div>
       </div>
-    </div>
-    <!-- JavaScript-->
-    <script src="../js/dashboard.js"></script>
+
+
+      <!-- JavaScript-->
+      <script src="../js/dashboard.js"></script>
 </body>
 </main>
 
-
-
-
-<!-- Card motivacional -->
-<div class="col-lg-6">
-  <div class="card motivational-card rounded-4 p-4">
-    <div class="card-header">
-      Card motivacional
-    </div>
-    <div class="card-body">
-      <p>"texto"</p>
-    </div>
-  </div>
-</div>
 
 <!-- Cards de Gráficos -->
 <div class="col-lg-6">
