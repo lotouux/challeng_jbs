@@ -21,7 +21,7 @@
   <link href="../css/dashboard.css" rel="stylesheet" />
 </head>
 
-<body class="bg-light">
+<body>
 
   <!-- Criando a barra de navegação -->
   <nav class="top-bar d-flex justify-content-between align-items-center p-3">
@@ -54,157 +54,197 @@
   </nav>
 
   <!-- Conteúdo principal -->
-  <main class = "container-fluid mt-4">
+  <main class="container-fluid mt-4">
     <div class="row g-4 m-2">
       <div class="col-lg-12">
         <div class="profile-card d-flex align-items-center p-4 rounded-4">
 
+          <!-- Foto -->
           <div class="profile-photo-large me-3">
-            <img src="https://i.pravatar.cc/300" alt="Foto de Perfil" class="img-fluid rounded-4" style="width: 300px; height: 200px; object-fit: cover;">
+            <img src="https://i.pravatar.cc/300" alt="Foto de Perfil" class="img-fluid rounded-4"
+              style="width: 300px; height: 200px; object-fit: cover;">
           </div>
 
-          <div>
+          <!-- Texto e Estatísticas -->
+          <div class="flex-grow-1">
             <h2>Bem vindo, <span id="userName">Usuário(a)</span>!</h2>
-            <p class="mb-0">Seu desempenho atual:</p>
+            <p class="mb-3">Seu desempenho atual:</p>
 
-            <div class="metrics">
-              <p class="mb-0">Vendas <strong class=""text-danger>15%</strong></p>
-              <div class="progress mb-2" style="height: 10px">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            <!-- Estatisticas lado a lado -->
+            <div class="stats-container">
+              <div class="stat text-center">
+                <div class="percentage">25%</div>
+                <div class="title">Vendas</div>
               </div>
 
-              <p class="mb-0">Produtividade <strong class="text-dark">56%</strong></p>
-              <div class="progress mb-2" style="height: 10px">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 56%;" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="stat text-center">
+                <div class="percentage">40%</div>
+                <div class="title">Produtividade</div>
               </div>
 
-              <p class="mb-0">Qualidade <strong class="text-secondary">95%</strong></p>
-              <div class="progress mb-2" style="height: 10px">
-                <div class="progress-bar bg-secondary" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="stat text-center">
+                <div class="percentage">60%</div>
+                <div class="title">Qualidade</div>
               </div>
+            </div>
+
+            <!-- Botão abaixo das estatísticas -->
+            <div class="profile-btn mt-3">
+              <button class="btn-profile">Ver Perfil Completo</button>
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="numerical-metrics-card">
-              <div class="d-flex">
+          <!-- Círculo de Pontuação -->
+          <div class="progress-circle ms-auto">
+            <svg class="circle" width="160" height="160">
+              <!-- Circulo de fundo-->
+              <circle class="bg" cx="80" cy="80" r="70" />
+              <!-- Circulo de progresso-->
+              <circle class="progress" cx="80" cy="80" r="70" />
+            </svg>
 
-                <!-- Ex.: Total de Pontos -->
-                <div class="metric-card">
-                  <div class="metric-icon-number">
-                    <i class="bi bi-trophy"></i>
-                    <span class="metric-number">350</span>
-                  </div>
-                  <p class="metric-label">Pontuação</p>
-                </div>
-
-                <div class="metric-card">
-                  <div class="metric-icon-number">
-                    <i class="bi bi-clipboard2-check"></i>
-                    <span class="metric-number">85</span>
-                  </div>
-                  <p class="metric-label">Concluídas</p>
-                </div>
-
-                <div class="metric-card">
-                  <div class="metric-icon-number">
-                    <i class="bi bi-star"></i>
-                    <span class="metric-number">4.8</span>
-                  </div>
-                  <p class="metric-label">Média</p>
-                </div>
-              </div>
+            <div class="circle-content">
+              <div class="points">370</div>
+              <div class="goal">370 / 1700</div>
             </div>
           </div>
-        </div>  
+        </div>
+      </div>
+    </div>
+
+    <!-- Linha de cards -->
+    <div class="row g-3 m-4">
+      <!-- Ranking -->
+      <div class="col-md-4">
+        <div class="info-card p-3 rounded-4 d-flex align-items-center">
+          <div class="icon-square">
+            <i class="bi bi-trophy icon me-3"></i>
+          </div>
+          <div>
+            <h6 class="info-title mb-1">Posição no Ranking</h6>
+            <p class="mb-0 fw-bold">3º Lugar</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Card de Ranking -->
-      <div class="row g-4 mt-3">
-        <div class="col-lg-3">
-          <div class="card ranking-card rounded-4 p-2">
-            <div class="card-body p-2">
-              <div class="photo-podium">
-                <!-- Segundo Lugar -->
-                <div class="podium-place third">
-                  <div class="position-number">2º</div>
-                  <img src="https://i.pravatar.cc/100" alt="3º Lugar" class="podium-photo">
-                  <div class="player-name">Carla</div>
-                  <div class="player-points">120 pts</div>
-                </div>
-
-                <!-- Primeiro Lugar -->
-                <div class="podium-place first">
-                  <div class="position-number">1º</div>
-                  <img src="https://i.pravatar.cc/400" alt="1º Lugar" class="podium-photo">
-                  <div class="player-name">Bruno</div>
-                  <div class="player-points">120 pts</div>
-                </div>
-
-                <!-- Terceiro Lugar -->
-                <div class="podium-place second">
-                  <div class="position-number">3º</div>
-                  <img src="https://i.pravatar.cc/300" alt="2º Lugar" class="podium-photo">
-                  <div class="player-name">Alice</div>
-                  <div class="player-points">120 pts</div>
-                </div>
-              </div>
-              <!-- Texto Ranking -->
-              <div class="ranking-title">Ranking</div>
-            </div>
+      <!-- Avaliações -->
+      <div class="col-md-4">
+        <div class="info-card p-3 rounded-4 d-flex align-items-center">
+          <div class="icon-square">
+            <i class="bi bi-star icon me-3"></i>
+          </div>
+          <div>
+            <h6 class="info-title mb-1">Média de Avaliações</h6>
+            <p class="mb-0 fw-bold">4.7 / 5</p>
           </div>
         </div>
+      </div>
 
-        <!-- Card de Ranking -->
-        <div class="col-lg-3">
-          <div class="card new-metric-card rounded-4 p-4">
-            <div class="card-header">
-              Conquistas
-            </div>
-            <div class="card-body">
-              <p>"texto"</p>
-            </div>
+      <!-- Missões -->
+      <div class="col-md-4">
+        <div class="info-card p-3 rounded-4 d-flex align-items-center">
+          <div class="icon-square">
+            <i class="bi bi-flag icon me-3"></i>
+          </div>
+          <div>
+            <h6 class="info-title mb-1">Missões Concluídas</h6>
+            <p class="mb-0 fw-bold">18 / 25</p>
           </div>
         </div>
-
-        <!-- Card motivacional -->
-        <div class="col-lg-6">
-          <div class="card motivational-card rounded-4 p-4">
-            <div class="card-header">
-              Card motivacional
-            </div>
-            <div class="card-body">
-              <p>"texto"</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cards de Gráficos -->
-        <div class="col-lg-6">
-          <div class="card data-card shadow-sm rounded-4 p-4">
-            <h6>Vendas R$/Unidades</h6>
-            <canvas id="linhaChart" height="250"></canvas>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
-            <h6>Categorias de Produtos Vendidos</h6>
-            <canvas id="donutChart" height="250"></canvas>
-          </div>
-        </div>
-
-        <!-- Novo Card: Gráfico de Barra -->
-        <div class="col-lg-6">
-          <div class="card data-card shadow-sm rounded-4 p-4">
-            <h6>Vendas Mensais (Unidades)</h6>
-            <canvas id="barraChart" height="250"></canvas>
-          </div>
-        </div>
+      </div>
     </div>
-  </main>
 
-  <!-- JavaScript-->
-  <script src="../js/dashboard.js"></script>
+    <div class="row g-4 m-2">
+      <!-- Card de Ranking -->
+      <div class="col-lg-8">
+        <div class="card ranking-card rounded-4 p-2">
+          <div class="card-body p-2">
+            <!-- Texto Ranking -->
+            <div class="ranking-title">Ranking</div>
+            <div class="photo-podium">
+              <!-- Segundo Lugar -->
+              <div class="podium-place third">
+                <div class="position-number">2º</div>
+                <img src="https://i.pravatar.cc/100" alt="3º Lugar" class="podium-photo">
+                <div class="player-name">Carla</div>
+                <div class="player-points">120 pts</div>
+              </div>
+
+              <!-- Primeiro Lugar -->
+              <div class="podium-place first">
+                <div class="position-number">1º</div>
+                <img src="https://i.pravatar.cc/400" alt="1º Lugar" class="podium-photo">
+                <div class="player-name">Bruno</div>
+                <div class="player-points">120 pts</div>
+              </div>
+
+              <!-- Terceiro Lugar -->
+              <div class="podium-place second">
+                <div class="position-number">3º</div>
+                <img src="https://i.pravatar.cc/300" alt="2º Lugar" class="podium-photo">
+                <div class="player-name">Alice</div>
+                <div class="player-points">120 pts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card de Conquistas -->
+      <div class="col-lg-3">
+        <div class="card new-metric-card rounded-4 p-4">
+          <div class="card-header">
+            Conquistas
+          </div>
+          <div class="card-body">
+            <p>"texto"</p>
+          </div>
+        </div>
+      </div>
+      <!-- JavaScript-->
+      <script src="../js/dashboard.js"></script>
 </body>
+</main>
+
+
+
+
+<!-- Card motivacional -->
+<div class="col-lg-6">
+  <div class="card motivational-card rounded-4 p-4">
+    <div class="card-header">
+      Card motivacional
+    </div>
+    <div class="card-body">
+      <p>"texto"</p>
+    </div>
+  </div>
+</div>
+
+<!-- Cards de Gráficos -->
+<div class="col-lg-6">
+  <div class="card data-card shadow-sm rounded-4 p-4">
+    <h6>Vendas R$/Unidades</h6>
+    <canvas id="linhaChart" height="250"></canvas>
+  </div>
+</div>
+<div class="col-lg-6">
+  <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
+    <h6>Categorias de Produtos Vendidos</h6>
+    <canvas id="donutChart" height="250"></canvas>
+  </div>
+</div>
+
+<!-- Novo Card: Gráfico de Barra -->
+<div class="col-lg-6">
+  <div class="card data-card shadow-sm rounded-4 p-4">
+    <h6>Vendas Mensais (Unidades)</h6>
+    <canvas id="barraChart" height="250"></canvas>
+  </div>
+</div>
+</div>
+</main>
+
+
 
 </html>
