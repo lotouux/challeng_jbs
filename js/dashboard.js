@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         configButton.classList.add('active');
     });
 
-    // Gráfico de Linha
+    // Gráfico de Linha (Vendas R$/Unidades)
     const ctx1 = document.getElementById('linhaChart').getContext('2d');
     new Chart(ctx1, {
         type: 'line',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Gráfico de Donut
+    // Gráfico de Donut (Categorias de Produtos Vendidos)
     const ctx2 = document.getElementById('donutChart').getContext('2d');
     new Chart(ctx2, {
         type: 'doughnut',
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //Gráfico de Barras
+    //Gráfico de Barras (Vendas Unidades Mensais)
     const ctx3 = document.getElementById('barraChart').getContext('2d');
     new Chart(ctx3, {
         type: 'bar',
@@ -85,6 +85,53 @@ document.addEventListener('DOMContentLoaded', () => {
                     backgroundColor: 'rgba(217, 61, 0, 0.7)',
                     borderWidth: 1,
                     borderRadius: 14,
+                    tension: 0.3,
+                    fill: false
+                },
+                {
+                    label: 'Metas',
+                    type: 'line',
+                    data: [3000, 1500, 2500, 3000, 2050, 2000],
+                    backgroundColor: 'rgba(100, 100, 100, 0.7)',
+                    borderColor: 'rgba(100, 100, 100, 0.7)',
+                    borderWidth: 4,
+                    tension: 0.3,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { position: 'bottom' } },
+            scales: {
+                y: { beginAtZero: true },
+            }
+        }
+    });
+
+    //Gráfico de Barras (Vendas R$ Mensais)
+    const ctx4 = document.getElementById('barraChart2').getContext('2d');
+    new Chart(ctx4, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+            datasets: [
+                {
+                    label: 'Valor',
+                    data: [2000, 1800, 2200, 2100, 2300, 1750],
+                    backgroundColor: 'rgba(217, 61, 0, 0.7)',
+                    borderWidth: 1,
+                    borderRadius: 14,
+                    tension: 0.3,
+                    fill: false
+                },
+                {
+                    label: 'Metas',
+                    type: 'line',
+                    data: [1800, 1500, 2500, 2800, 2100, 2000],
+                    backgroundColor: 'rgba(100, 100, 100, 0.7)',
+                    borderColor: 'rgba(100, 100, 100, 0.7)',
+                    borderWidth: 4,
                     tension: 0.3,
                     fill: false
                 }
