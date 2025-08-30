@@ -15,49 +15,74 @@ Our goal is to design a digital solution that makes employees’ experience more
 
 ## Project Goal
 The system aims to **engage Swift** employees through a gamified environment that brings together:
-- **Interactive dashboard** with metrics and results visualization.
-- **Secure login** system for individual access.
-- **Gamification features** such as points, ranking, goals, and achievements.
+- **Interactive dashboard** with metrics, charts and achievements.
+- **Login system** for individual access (currently simulated).
+- **Gamification features** such as points, ranking, goals, and missions.
 
 ---
 
 ## Technologies Used
 - Frontend: **HTML5, CSS3, Bootstrap 5**
 - Charts & Data Visualization: **Chart.js**
-- Icons: **Font Awesome**
+- Icons: **Bootstrap Icons**
 
 ---
 
 ## Features Implemented
 
-- **Login Page (HTML + CSS + Bootstrap)**
-  - Responsive design (works well on mobile and desktop)
-  - Form with email and password fields
+- **Login Page**
+  - Responsive design
+  - Email and password fields
   - Error message for invalid login
+  - **Simulated authentication** (accepts any credentials for now)
+  ![Login](/src/img/preview/login.png)
     
-- **Dashboard Page (HTML + CSS + Chart.js)**
-  - Top navigation bar with logo, search, and action icons
-  - Charts implemented
-  - Basic responsive layout using Bootstrap grid
-    
-- Custom Styling
-  - Login page with gradient background and styled buttons
-  - Dashboard cards with shadows, rounded corners, and charts integration
-  - Adaptation for small screens (iPhone SE)
+- **Dashboard Page**
+  - **Preloader animation** before loading the content
+  - **Navigation bar** with logo, links, notifications, settings, and profile picture
+  ![Dashboard](/src/img/preview/navbar.png)
+
+  - **Profile card** with welcome message, performance stats, and progress cicle with points
+  ![Dashboard](/src/img/preview/profile_card.png)
+
+  - **Info cards:** ranking position, evaluations, missions completed
+  ![Dashboard](/src/img/preview/info_cards.png)
+  
+  - **Motivational card:** tips, strengths and areas for improvement
+  ![Dashboard](/src/img/preview/motivacional_cards.png)
+
+  - **Achievements card:** completed and pending goals with icons
+  ![Dashboard](/src/img/preview/achievements_card.png)
+
+  - **Ranking Top 3** podium with avatars and points
+  ![Dashboard](/src/img/preview/ranking_card.png)
+
+  - **Voting card** for prizes with progress bars
+  ![Dashboard](/src/img/preview/voting_card.png)
+
+  - **Charts (Chart.js):**
+    - Line chart (Sales R$/Units)
+    - Donut chart (Product categories)
+    - Bar charts (Monthly sales in units and R$)
+    ![Dashboard](/src/img/preview/charts_cards.png)
+
+- **Responsive Design**
+  - Built with Bootstrap grid system
+  - Adapted for desktop and mobile (tested on small screens)
 
 ---
 
 ## Next Steps
 - finalize the front-end
-- Implement real authentication (backend with Python/Flask or Node.js).
+- Replace simulated login with real authentication (backend with Python/Flask or Node.js).
   
 - Add gamification system:
   - Points for completed goals.
   - Employee ranking.
   - Weekly/monthly challenges.
     
-- Expand dashboard with more metrics and charts.
-- Build a user profile area with customization.
+- Add notifications and user settings
+- Build a profile page with customization
 
 --- 
 
