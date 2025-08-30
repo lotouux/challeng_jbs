@@ -1,9 +1,18 @@
+console.log('Dashboard JS rodou');
+
+setTimeout(() => {
+    console.log('Timeout disparou');
+    document.getElementById('preloader').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+}, 3000);
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Lógica para o estado "ativo" na navegação
     const navLinks = document.querySelectorAll('.nav-link');
     const configButton = document.querySelector('.btn-outline-dark');
-    
+
     // Adiciona o listener para os links de navegação
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
