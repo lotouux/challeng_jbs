@@ -5,7 +5,7 @@
 ========================== */
 body {
     font-family: 'Poppins', sans-serif !important;
-    background: #fdeee7;
+    background: #fdf4f0;
     color: #333;
 }
 
@@ -614,6 +614,36 @@ body {
     margin-bottom: 1rem;
     color: #D93D00 !important;
     font-weight: 600;
+}
+
+/* ==========================
+   PROFILE CSS
+========================== */
+.profile-sumary-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fundo semi-transparente */
+    border: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+    transition: all 0.3s ease;
+    /* Transições suaves */
+    max-height: 400px;
+    /* Aumenta o arredondamento */
+    backdrop-filter: blur(5px);
+    /* Efeito de vidro fosco */
+    -webkit-backdrop-filter: blur(5px);
+}
+.btn-profile-edit {
+    background-color: #D93D00;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================
