@@ -49,16 +49,12 @@ The system aims to **engage Swift** employees through a gamified environment tha
   ![Dashboard](/src/img/preview/info_cards.png)
   
   - **Motivational card:** tips, strengths and areas for improvement
-  ![Dashboard](/src/img/preview/motivacional_cards.png)
-
   - **Achievements card:** completed and pending goals with icons
-  ![Dashboard](/src/img/preview/achievements_card.png)
+  ![Dashboard](/src/img/preview/motivacional_achievements_cards.png)
 
   - **Ranking Top 3** podium with avatars and points
-  ![Dashboard](/src/img/preview/ranking_card.png)
-
   - **Voting card** for prizes with progress bars
-  ![Dashboard](/src/img/preview/voting_card.png)
+  ![Dashboard](/src/img/preview/ranking_voting_cards.png)
 
   - **Charts (Chart.js):**
     - Line chart (Sales R$/Units)
