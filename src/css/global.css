@@ -30,57 +30,38 @@ body {
     /* Efeito de zoom */
 }
 
-/* Links da navbar */
-.nav-link {
-    color: #444;
+/* Links da navbar */ 
+.nav-link { 
+    color: #444; 
     font-weight: 500;
-    transition: all 0.3s ease;
-    /* Transição suave */
-    box-shadow: none;
-    border-radius: 999px;
-    /* Mantém o formato pill */
-    padding: 8px 18px;
-}
+    transition: all 0.3s ease; 
+    /* Transição suave */ 
+    box-shadow: none; 
+    border-radius: 999px; 
+    /* Mantém o formato pill */ 
+    padding: 8px 18px; 
+} 
 
-.nav-link:hover,
-.nav-link.active {
-    background-color: #D93D00;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2);
-    /* Sombra suave */
-}
+.nav-link:hover, .nav-link.active { 
+    background-color: #D93D00; 
+    color: #fff; 
+    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2); 
+    /* Sombra suave */ 
+} 
 
-/* Container arredondado dos links */
-.nav-links-container {
-    border: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Fundo opaco */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    /* Sombra visível para profundidade */
-    border-radius: 999px;
-    padding: 6px;
-    transition: box-shadow 0.3s ease;
-    backdrop-filter: blur(5px);
-    /* Efeito de vidro fosco */
-    -webkit-backdrop-filter: blur(5px);
-}
-
-/* Botões arredondados */
-.btn-outline-dark {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #444;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 18px;
-    border-radius: 999px;
-}
-
-.btn-outline-dark:hover {
-    background-color: #D93D00;
-    color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+/* Container arredondado dos links */ 
+.nav-links-container { 
+    border: none; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    /* Fundo opaco */ 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    /* Sombra visível para profundidade */ 
+    border-radius: 999px; 
+    padding: 6px; 
+    transition: box-shadow 0.3s ease; 
+    backdrop-filter: blur(5px); 
+    /* Efeito de vidro fosco */ 
+    -webkit-backdrop-filter: blur(5px); 
 }
 
 /* ==========================

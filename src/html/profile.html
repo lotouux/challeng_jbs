@@ -31,34 +31,45 @@
         <p id="modal-date" class="achievement-modal-date"></p>
     </div>
 
-    <!-- Criando a barra de navegação -->
+    <!-- Barra de navegação -->
     <nav class="top-bar d-flex justify-content-between align-items-center p-3">
         <a href="#" class="navbar-brand">
-            <img src="../img/swift_logo.png" alt="Logo Swift" style="width: 100px;">
+            <img src="../img/icons/swift_logo.png" alt="Logo Swift" style="width: 100px;">
         </a>
 
+        <!-- Navegação -->
         <div class="d-flex align-items-center">
+            <!-- Links principais -->
             <div class="nav-links-container me-4">
                 <div class="nav-links d-none d-md-flex align-items-center">
-                    <a href="dashboard.html" class="nav-link px-3 py-2 rounded-pill me-2" data-page="dashboard">Dashboard</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill me-2" data-page="metas">Ranking</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Avaliações</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Missões</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Performance</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Conquistas</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Prêmios</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Estatisticas</a>
+                    <a href="dashboard.html" class="nav-link px-3 py-2 rounded-pill" data-page="dashboard">Dashboard</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="metas">Ranking</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="avaliacoes">Avaliações</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="missoes">Missões</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="performance">Performance</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="conquistas">Conquistas</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="premios">Prêmios</a>
+                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="estatisticas">Estatísticas</a>
                 </div>
             </div>
 
-            <a href="#" class="btn btn-outline-dark me-3 rounded-pill" data-page="notificacoes">
-                <i class="bi bi-bell"></i>
-            </a>
+            <!-- Notificações -->
+            <div class="nav-links-container me-3">
+                <a href="#" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center" data-page="notificacoes">
+                    <i class="bi bi-bell fs-5"></i>
+                </a>
+            </div>
 
-            <a href="#" class="btn btn-outline-dark me-3 rounded-pill" data-page="configuracoes">
-                <i class="bi bi-gear"></i> Configurações
-            </a>
+            <!-- Configurações -->
+            <div class="nav-links-container me-3">
+                <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center"
+                    data-page="configuracoes">
+                    <i class="bi bi-gear fs-5 me-2"></i>
+                    <span>Configurações</span>
+                </a>
+            </div>
 
+            <!-- Foto de Perfil -->
             <div class="profile-photo">
                 <a href="profile.html">
                     <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
@@ -67,7 +78,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- Conteúdo principal -->
     <main class="container my-5">
