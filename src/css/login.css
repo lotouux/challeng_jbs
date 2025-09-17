@@ -1,14 +1,17 @@
 body {
     font-family: Arial, sans-serif;
+    /* Mantenha o gradiente no body */
     background: linear-gradient(#D93D00, #ff6e35);
+    /* Adicione esta linha para fixar o gradiente */
+    background-attachment: fixed;
     color: #333;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -44,7 +47,8 @@ p {
 }
 
 .btn:hover {
-    background-color: #b73000; /* Tom mais escuro no hover */
+    background-color: #b73000;
+    /* Tom mais escuro no hover */
 }
 
 .text-start {
@@ -60,38 +64,32 @@ p {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 24px;
-    }
+/* Remova a seção de responsividade existente e substitua por esta */
 
-    .btn {
-        padding: 10px;
-    }
+/* Oculta os itens que não são mais necessários (pode ser o logo ou a mensagem) */
+.form-container.is-active {
+    display: block;
 }
 
-/* Responsividade iPhone SE (não ligo para os outros celulares) */
-@media screen and (max-width: 768px) {
-    body .img-fluid {
-        position: fixed;
-        top: 50px;
-        left: 50%;                /* posiciona o centro no meio da tela */
-        transform: translateX(-50%); /* corrige o deslocamento */
-        max-width: 100%;          /* evita que estoure na tela */
+/* Responsividade para telas menores que 768px (tablets e celulares) */
+@media (max-width: 600px) {
+    /* Ajustes para telas muito pequenas */
+    .img-fluid {
+        max-width: 120px !important; /* Diminui o logo para ocupar menos espaço */
+        margin-bottom: 20px; /* Adiciona espaço entre o logo e o formulário */
     }
 
-    body #container {
-        width: 100vw !important;       /* largura total da viewport */
-        max-width: 100vw !important; 
+    .form-container {
+        width: 90% !important; /* Largura para telas pequenas */
+        margin: 0 10px; /* Adiciona margem lateral para evitar que o formulário "grude" nas bordas */
+        padding: 20px !important; /* Diminui o padding interno */
+    }
 
-        border-top-left-radius: 16px !important;
-        border-top-right-radius: 16px !important;
-        border-bottom-left-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
+    h2 {
+        font-size: 1.5rem; /* Diminui o tamanho do título */
+    }
 
-        position: fixed;
-        top: 280px;
-        bottom: 20px;
-        width: 100%;
+    p.text-muted {
+        font-size: 0.9rem; /* Diminui o tamanho da descrição */
     }
 }
