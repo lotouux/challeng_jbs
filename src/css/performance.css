@@ -1,0 +1,63 @@
+
+.performance-chart-card,
+.tips-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.performance-chart-card:hover,
+.tips-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.performance-chart-card h5,
+.tips-card h5 {
+    color: #D93D00;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+#performanceChart {
+    max-height: 400px; 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+
+.tips-list .list-group-item {
+    background-color: transparent !important;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #555;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.tips-list .list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.tips-list .list-group-item i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.tips-list .bi-check-circle-fill {
+    color: #28a745;
+}
+
+.tips-list .bi-info-circle-fill {
+    color: #ffc107;
+}
+
+.tips-list .bi-x-circle-fill {
+    color: #dc3545;
+}
