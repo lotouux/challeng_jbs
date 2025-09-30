@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #D93D00;
+    --primary-hover: #b83300;
+}
+.main-title {
+    color: var(--primary-color);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: white;
+}
+
+.settings-tabs .nav-link {
+    color: #6c757d;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem !important;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.settings-tabs .nav-link.active {
+    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.settings-tabs .nav-link:hover {
+    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.profile-photo-lg img {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(217, 61, 0, 0.2);
+}
+
+.setting-card {
+    border: none;
+    border-top: 5px solid var(--primary-color); 
+    background-color: #fbfcfd; 
+}
+
+
+.form-control-file {
+    border-color: #ced4da;
+    color: #495057;
+    padding: 0.375rem 0.75rem;
+}
+
+.form-control-file::-webkit-file-upload-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.form-control-file::-webkit-file-upload-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.form-check-input:checked {
+    background-color: #ff7043; 
+    border-color: #ff7043;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 112, 67, 0.25);
+}

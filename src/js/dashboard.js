@@ -150,28 +150,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenuDropdown = document.getElementById('mobileMenuDropdown');
-    const menuLinks = mobileMenuDropdown.querySelectorAll('a');
-
-    // Abre ou fecha ao clicar no botão
-    hamburgerBtn.addEventListener('click', function (e) {
-        e.stopPropagation(); // evita que o clique feche imediatamente
-        mobileMenuDropdown.classList.toggle('show');
-    });
-
-    // Fecha ao clicar fora do botão ou do menu
-    document.addEventListener('click', function (e) {
-        if (!mobileMenuDropdown.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-            mobileMenuDropdown.classList.remove('show');
-        }
-    });
-
-    // Fecha ao clicar em qualquer link do menu
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuDropdown.classList.remove('show');
-        });
-    });
-});

@@ -31,82 +31,8 @@
   </div>
 
   <div id="dashboard" style="display:none;">
-    <nav class="top-bar d-flex justify-content-between align-items-center p-3">
-      <!-- Logo -->
-      <a href="#" class="navbar-brand">
-        <img src="../img/icons/swift_logo.png" alt="Logo Swift" style="width: 100px;">
-      </a>
 
-      <!-- Menu Desktop + Mobile -->
-      <div class="d-flex align-items-center ms-auto">
-        <!-- Links principais (desktop) -->
-        <div class="nav-links-container me-4 d-none d-md-flex align-items-center">
-          <a href="#" class="nav-link px-3 py-2 rounded-pill active" data-page="dashboard">Dashboard</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="metas">Ranking</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="avaliacoes">Avaliações</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="missoes">Missões</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="performance">Performance</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="conquistas">Conquistas</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="premios">Prêmios</a>
-          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="estatisticas">Estatísticas</a>
-        </div>
-
-        <!-- Notificações -->
-        <div class="nav-links-container me-3">
-          <a href="#" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center" data-page="notificacoes">
-            <i class="bi bi-bell fs-5"></i>
-          </a>
-        </div>
-
-        <!-- Configurações -->
-        <div class="nav-links-container me-3">
-          <!-- Desktop: ícone + texto -->
-          <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-none d-md-flex align-items-center"
-            data-page="configuracoes">
-            <i class="bi bi-gear fs-5 me-2"></i>
-            <span>Configurações</span>
-          </a>
-          <!-- Mobile: só ícone -->
-          <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-md-none d-flex align-items-center"
-            data-page="configuracoes">
-            <i class="bi bi-gear fs-5"></i>
-          </a>
-        </div>
-
-        <!-- Foto do perfil (só desktop) -->
-        <div class="profile-photo ms-3 d-none d-md-block">
-          <a href="profile.html">
-            <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil" class="rounded-circle"
-              style="width: 40px; height: 40px; object-fit: cover;">
-          </a>
-        </div>
-
-        <!-- Hambúrguer + Dropdown (Mobile) -->
-        <div class="d-md-none">
-          <div class="nav-links-container me-3">
-            <button class="hamburger-btn d-flex align-items-center justify-content-center" id="hamburgerBtn">
-              <i class="bi bi-list"></i>
-            </button>
-          </div>
-        </div>
-
-
-        <!-- Dropdown -->
-        <div class="mobile-menu-dropdown" id="mobileMenuDropdown">
-          <div class="mobile-menu-content">
-            <a href="#" class="nav-link">Dashboard</a>
-            <a href="#" class="nav-link">Ranking</a>
-            <a href="#" class="nav-link">Avaliações</a>
-            <a href="#" class="nav-link">Missões</a>
-            <a href="#" class="nav-link">Performance</a>
-            <a href="#" class="nav-link">Conquistas</a>
-            <a href="#" class="nav-link">Prêmios</a>
-            <a href="#" class="nav-link">Estatísticas</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
+    <div id="navbar-placeholder"></div>
 
     <main class="container-fluid">
       <div class="row g-4 m-1">
@@ -596,6 +522,7 @@
   </div>
 
   <script src="../js/dashboard.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
