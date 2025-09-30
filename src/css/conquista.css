@@ -1,0 +1,78 @@
+.progress-section .progress {
+    background-color: #e9ecef !important;
+    border-radius: 999px !important;
+}
+.progress-section .progress-bar {
+    background-color: #D93D00 !important;
+    border-radius: 999px !important;
+}
+
+.conquista-card, .conquista-desafio {
+    border-radius: 16px; 
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.conquista-card:hover, .conquista-desafio:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.conquista-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.conquista-card .card-title {
+    font-weight: 600;
+    min-height: 42px;
+}
+.conquista-card .card-status {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.conquista-card.completed {
+    border-color: #198754 !important;
+}
+.conquista-card.completed .card-icon {
+    color: #D93D00 !important;
+}
+.conquista-card.completed .card-status {
+    color: #198754 !important;
+}
+
+.conquista-card.pending {
+    border-color: #dc3545 !important;
+}
+.conquista-card.pending .card-icon {
+    color: #dc3545 !important;
+}
+.conquista-card.pending .card-status {
+    color: #dc3545 !important;
+}
+
+.conquista-desafio {
+    border: 2px solid #D98600 !important;
+    min-height: 140px; 
+}
+.conquista-desafio .form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+.conquista-desafio .form-check-input {
+    flex-shrink: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0;
+}
+.conquista-desafio .form-check-input:checked {
+    background-color: #D93D00 !important;
+    border-color: #D93D00 !important;
+}
+.conquista-desafio .form-check-label {
+    font-weight: 500;
+}
