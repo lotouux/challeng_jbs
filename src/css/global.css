@@ -3,98 +3,188 @@
 /* ==========================
    RESET & BASE
 ========================== */
-body {
+body,
+html {
     font-family: 'Poppins', sans-serif !important;
     background: #fdf4f0;
     color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    z-index: 1200;
+    position: relative;
 }
 
 /* ==========================
    NAVBAR
 ========================== */
-.top-bar {
-    background-color: transparent;
-    box-shadow: none;
-    margin-bottom: -30px;
+.top-bar .d-flex.align-items-center.ms-auto {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
 .profile-photo img {
-    border: 3px solid #D93D00;
-    /* Borda */
-    transition: transform 0.3s ease-in-out;
-    /* Transição suave */
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
+    margin-left: 0.5rem;
+    border: 4px solid #D93D00;
 }
 
 .profile-photo img:hover {
     transform: scale(1.08);
-    /* Efeito de zoom */
 }
 
-/* Links da navbar */ 
-.nav-link { 
-    color: #444; 
+/* Links da navbar */
+.nav-link {
+    color: #444;
     font-weight: 500;
-    transition: all 0.3s ease; 
-    /* Transição suave */ 
-    box-shadow: none; 
-    border-radius: 999px; 
-    /* Mantém o formato pill */ 
-    padding: 8px 18px; 
-} 
-
-.nav-link:hover, .nav-link.active { 
-    background-color: #D93D00; 
-    color: #fff; 
-    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2); 
-    /* Sombra suave */ 
-} 
-
-/* Container arredondado dos links */ 
-.nav-links-container { 
-    border: none; 
-    background-color: rgba(255, 255, 255, 0.7); 
-    /* Fundo opaco */ 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-    /* Sombra visível para profundidade */ 
-    border-radius: 999px; 
-    padding: 6px; 
-    transition: box-shadow 0.3s ease; 
-    backdrop-filter: blur(5px); 
-    /* Efeito de vidro fosco */ 
-    -webkit-backdrop-filter: blur(5px); 
+    transition: all 0.3s ease;
+    border-radius: 999px;
+    padding: 8px 18px;
 }
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #D93D00;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2);
+}
+
+/* Containers dos links */
+.nav-links-container {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 999px;
+    padding: 6px;
+    transition: box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+}
+
+/* Botões */
+.btn,
+.btn-profile {
+    background-color: #D93D00 !important;
+    border-color: #D93D00 !important;
+    color: #fff !important;
+}
+
+.btn:hover,
+.btn-profile:hover {
+    background-color: #b73200 !important;
+    border-color: #b73200 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de contorno */
+.btn-outline-danger,
+.btn-outline-secondary,
+.btn-outline-dark {
+    background-color: transparent !important;
+    border-color: #D93D00 !important;
+    color: #D93D00 !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-secondary:hover,
+.btn-outline-dark:hover {
+    background-color: #D93D00 !important;
+    color: #fff !important;
+}
+
+/* Botão hamburger dentro do container */
+.hamburger-btn {
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.hamburger-btn i {
+    font-size: 1.25rem;
+    color: #444;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-btn:hover {
+    color: #fff;
+    background-color: #D93D00;
+    box-shadow: 0 4px 10px rgba(217, 61, 0, 0.2);
+}
+
+/* Garante que o menu móvel fique sempre escondido por padrão */
+.mobile-menu-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+
 
 /* ==========================
-   RESPONSIVIDADE
+   MENU MOBILE
 ========================== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
-    /* Para telas médias e pequenas */
-    .row.g-4.m-2 {
-        flex-direction: column;
-        /* empilha as colunas */
+    /* Overlay transparente para todo o menu */
+    .mobile-menu-dropdown {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(5px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1500;
+        overflow-y: auto;
     }
 
-    .numerical-metrics-card {
-        min-height: auto;
-        /* deixa altura natural para não cortar conteúdo */
+    .mobile-menu-dropdown.show {
+        opacity: 1;
+        visibility: visible;
     }
 
-    .metric h5 {
-        font-size: 2rem;
-        /* reduz números em telas menores */
-    }
-}
-
-
-@media (max-width: 576px) {
-
-    .metric h5,
-    .metric h6 {
-        font-size: 1.5rem;
+    /* Bloco branco do menu */
+    .mobile-menu-content {
+        background-color: #fff;
+        max-width: 400px;
+        width: 90%;
+        margin: 80px auto 0 auto;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .progress-fill {
-        height: 30px;
+    .mobile-menu-content .nav-link {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
     }
+
 }

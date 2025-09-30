@@ -1,31 +1,36 @@
 /* ==========================
    MAIN PROFILE CARD & WELCOME
 ========================== */
-.profile-card {
+.profile-card,
+.daily-goal-card,
+.motivational-card,
+.achievements-card,
+.ranking-card,
+.voting-card,
+.card,
+.data-card,
+.social-feed-card {
     background-color: rgba(255, 255, 255, 0.7);
-    /* Fundo semi-transparente */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    /* Sombra suave */
+    border: none;
     transition: all 0.3s ease;
-    /* Transições suaves */
-    max-height: 400px;
-    border-radius: 16px;
-    /* Aumenta o arredondamento */
     backdrop-filter: blur(5px);
-    /* Efeito de vidro fosco */
     -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.profile-card:hover {
+.profile-card:hover,
+.daily-goal-card:hover,
+.motivational-card:hover,
+.achievements-card:hover,
+.ranking-card:hover,
+.voting-card:hover,
+.card:hover,
+.data-card:hover {
     transform: translateY(-5px);
     /* Elevação */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     /* Sombra */
-}
-
-.profile-photo-large img {
-    transition: transform 0.3s ease;
-    /* Transição mais suave */
 }
 
 .stats-container {
@@ -195,39 +200,88 @@
 }
 
 /* ==========================
-   CARD MOTIVACIONAL
+   OBJETIVO DO DIA
 ========================== */
-.motivational-card {
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Fundo opaco */
-    border: none;
-    padding: 30px;
-    /* Aumenta o padding interno */
-    border-radius: 16px;
-    /* Arredondamento maior */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    /* Sombra suave */
-    transition: all 0.3s ease;
-    /* Transições */
-    backdrop-filter: blur(5px);
-    /* Efeito de vidro fosco */
-    -webkit-backdrop-filter: blur(5px);
-}
 
-.motivational-card:hover {
-    transform: translateY(-5px);
-    /* Elevação no hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.motivational-title {
+.daily-goal-title,
+.motivational-title,
+.achievements-title,
+.ranking-title,
+.voting-title,
+.feed-title {
     font-weight: 700;
-    /* bold */
-    color: #D93D00;
+    color: #D93D00 !important;
     font-size: 1.5rem;
-    /* Aumenta o tamanho do título */
     margin-bottom: 0.5rem;
 }
+
+/* Estilo para a Lista de Tarefas */
+.task-list {
+    margin-top: 15px;
+}
+
+.task-list li {
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.task-list li:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(3px);
+}
+
+.task-list .text-success {
+    color: #D98600 !important;
+}
+
+.task-list .text-secondary {
+    color: #999 !important;
+}
+
+.daily-goal-card .progress-bar {
+    background-color: #D93D00 !important;
+    /* Garante que a barra use a cor principal */
+    font-weight: 700;
+}
+
+.streak-box .text-warning {
+    color: #D96300 !important;
+    /* Laranja da paleta para o ícone de prêmio/streak */
+}
+
+.bg-streak {
+    /* Fundo semi-transparente para manter o efeito vidro fosco */
+    background-color: rgba(255, 255, 255, 0.5);
+
+    /* Borda suave e sutil para delinear o box */
+    border: 1px solid rgba(217, 61, 0, 0.2);
+
+    /* Sombra mais suave para não parecer "pesado" */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.bg-streak:hover {
+    /* Pequeno efeito no hover para interação */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Garante que o ícone de prêmio use a cor correta */
+.streak-box .text-warning {
+    color: #D96300 !important;
+    /* Laranja/Âmbar da paleta */
+}
+
+/* ==========================
+   CARD MOTIVACIONAL (DICAS DE PERFORMANCE)
+========================== */
 
 .motivational-subtitle {
     font-weight: 600;
@@ -246,98 +300,78 @@
     align-items: center;
     font-size: 1rem;
     padding: 10px 15px;
-    /* Aumenta o padding */
     border-radius: 12px;
     margin-bottom: 8px;
-    /* Espaçamento entre os tópicos */
     transition: all 0.3s ease;
 }
 
+/* Garante que o hover em cada tópico seja sutil */
+.topic:hover {
+    transform: scale(1.01);
+}
+
+/* Mantendo as cores dos tópicos (ajustei para usar a paleta) */
 .topic.good {
     background-color: #ffe6d9;
+    /* Laranja claro */
     color: #a64d1f;
+    /* Laranja escuro */
 }
 
 .topic.to-improve {
     background-color: #ffdecc;
+    /* Laranja um pouco mais escuro */
     color: #a64d1f;
 }
 
 .topic i {
     font-size: 1.4rem;
     margin-right: 10px;
-    /* Adiciona espaçamento entre o ícone e o texto */
 }
 
 /* ==========================
    CONQUISTAS
 ========================== */
-.achievements-card {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 30px;
-    /* Aumenta o padding */
-    transition: all 0.3s ease;
-    /* Transição */
-    height: 100%;
-    /* Permite que o card se ajuste ao conteúdo da linha */
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    /* Adiciona sombra */
-    border-radius: 16px;
-    /* Arredondamento */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.achievements-card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.achievements-title {
-    color: #D93D00;
-    font-weight: 700;
-    /* bold */
-    font-size: 1.5rem;
-    /* Aumenta o tamanho do título */
-}
 
 .achievements-list .achievement {
     padding: 15px;
     /* Aumenta o padding */
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
     transition: all 0.3s ease;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
 .achievements-list .achievement:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: translateX(3px);
 }
 
 .icon-box {
-    width: 55px;
+    width: 50px;
     /* Aumenta o tamanho do ícone */
-    height: 55px;
+    height: 50px;
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     /* Aumenta o tamanho do ícone */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 
 .achievement-title {
     font-weight: 600;
-    color: #444;
+    color: #333;
 }
 
 .achievement-status {
     font-size: 0.9rem;
     /* Aumenta o tamanho do texto de status */
     color: #777;
+    font-weight: 500;
 }
 
 .icon-box.bg-warning {
@@ -359,33 +393,6 @@
 /* ==========================
    Ranking / Pódio
 ========================== */
-.ranking-card {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 30px;
-    /* Aumenta o padding */
-    transition: all 0.3s ease;
-    /* Transição */
-    height: 100%;
-    /* Permite que o card se ajuste ao conteúdo da linha */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    /* Adiciona sombra */
-    border-radius: 16px;
-    /* Arredondamento */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.ranking-card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.ranking-title {
-    color: #D93D00 !important;
-    font-weight: bold;
-}
 
 .bi-trophy-fill {
     color: #ffffff !important;
@@ -425,33 +432,6 @@
 /* ==========================
    CARD DE VOTAÇÃO
 ========================== */
-.voting-card {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 30px;
-    /* Aumenta o padding */
-    transition: all 0.3s ease;
-    /* Transição */
-    height: 100%;
-    /* Permite que o card se ajuste ao conteúdo da linha */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-    /* Adiciona sombra */
-    border-radius: 16px;
-    /* Arredondamento */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.voting-card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.voting-title {
-    color: #D93D00 !important;
-    font-weight: bold;
-}
 
 .voting-text {
     font-size: 0.95rem;
@@ -498,9 +478,9 @@
 }
 
 /* ==========================
-   GRÁFICOS
+   FEED DE CONQUISTAS (SOCIAL)
 ========================== */
-.data-card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -520,16 +500,164 @@
     -webkit-backdrop-filter: blur(5px);
 }
 
-.data-card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-
+/* ==========================
+   GRÁFICOS
+========================== */
 .data-card h5 {
     align-self: center;
     margin-bottom: 1rem;
     color: #D93D00 !important;
     font-weight: 600;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+/* Hamburger menu para telas pequenas */
+/* Mobile */
+@media (max-width: 768px) {
+
+    .profile-card {
+        flex-direction: column !important;
+        /* empilha verticalmente */
+        align-items: center !important;
+        /* centraliza horizontalmente */
+        text-align: center !important;
+        /* centraliza textos */
+    }
+
+    .profile-photo-large {
+        margin-bottom: 1rem;
+        /* já existente */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        /* remove o me-4 do bootstrap e centraliza a imagem */
+    }
+
+    .profile-photo-large img {
+        display: block;
+        /* garante que o auto margin funcione */
+    }
+
+    .progress-circle {
+        margin-top: 1rem;
+        /* espaçamento acima do círculo */
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: center;
+        /* centraliza stats horizontalmente */
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .flex-grow-1 {
+        width: 100%;
+        /* garante que o conteúdo ocupe toda a largura */
+    }
+
+    .achievements-list {
+        justify-content: center !important;
+        /* centraliza os cards */
+    }
+
+    .achievements-list .col-12 {
+        display: flex;
+        justify-content: center;
+        /* centraliza cada card */
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .achievement {
+        width: 100%;
+        max-width: 350px;
+        /* limita largura do card no mobile */
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.75rem;
+        box-sizing: border-box;
+    }
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        margin-right: 0.75rem;
+    }
+
+    .achievement-title {
+        font-size: 1rem;
+    }
+
+    .achievement-status {
+        font-size: 0.85rem;
+    }
+
+    .podium {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        /* mantém "chão" alinhado */
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+
+    /* 2º e 3º lugares com mesmo tamanho */
+    .position-box.second,
+    .position-box.third {
+        flex: 0 0 28%;
+        /* mesma largura */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    /* 1º lugar maior */
+    .position-box.first {
+        flex: 0 0 34%;
+        /* maior que os outros */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    /* Imagens */
+    .position-box.second img,
+    .position-box.third img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+        border-radius: 50%;
+    }
+
+    .position-box.first img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+    }
+
+    /* Troféus */
+    .position-box.second i,
+    .position-box.third i {
+        font-size: 1.2rem;
+    }
+
+    .position-box.first i {
+        font-size: 1.5rem;
+    }
 }

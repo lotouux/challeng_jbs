@@ -6,14 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- CSS personalizado -->
   <link href="../css/global.css" rel="stylesheet" />
   <link href="../css/dashboard.css" rel="stylesheet" />
   <link href="../css/preloader.css" rel="stylesheet" />
@@ -21,7 +17,6 @@
 
 <body>
 
-  <!-- Preloader -->
   <div id="preloader">
     <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
       <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#D93D00" stroke-width="20"
@@ -35,30 +30,25 @@
     </svg>
   </div>
 
-  <!-- Criando a barra de navegação -->
-
-  <!-- Dashboard -->
   <div id="dashboard" style="display:none;">
-    <!-- Barra de navegação -->
     <nav class="top-bar d-flex justify-content-between align-items-center p-3">
+      <!-- Logo -->
       <a href="#" class="navbar-brand">
         <img src="../img/icons/swift_logo.png" alt="Logo Swift" style="width: 100px;">
       </a>
 
-      <!-- Navegação -->
-      <div class="d-flex align-items-center">
-        <!-- Links principais -->
-        <div class="nav-links-container me-4">
-          <div class="nav-links d-none d-md-flex align-items-center">
-            <a href="#" class="nav-link px-3 py-2 rounded-pill active" data-page="dashboard">Dashboard</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="metas">Ranking</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="avaliacoes">Avaliações</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="missoes">Missões</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="performance">Performance</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="conquistas">Conquistas</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="premios">Prêmios</a>
-            <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="estatisticas">Estatísticas</a>
-          </div>
+      <!-- Menu Desktop + Mobile -->
+      <div class="d-flex align-items-center ms-auto">
+        <!-- Links principais (desktop) -->
+        <div class="nav-links-container me-4 d-none d-md-flex align-items-center">
+          <a href="#" class="nav-link px-3 py-2 rounded-pill active" data-page="dashboard">Dashboard</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="metas">Ranking</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="avaliacoes">Avaliações</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="missoes">Missões</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="performance">Performance</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="conquistas">Conquistas</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="premios">Prêmios</a>
+          <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="estatisticas">Estatísticas</a>
         </div>
 
         <!-- Notificações -->
@@ -70,85 +60,103 @@
 
         <!-- Configurações -->
         <div class="nav-links-container me-3">
-          <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center"
+          <!-- Desktop: ícone + texto -->
+          <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-none d-md-flex align-items-center"
             data-page="configuracoes">
             <i class="bi bi-gear fs-5 me-2"></i>
             <span>Configurações</span>
           </a>
+          <!-- Mobile: só ícone -->
+          <a href="config.html" class="nav-link px-3 py-2 rounded-pill d-md-none d-flex align-items-center"
+            data-page="configuracoes">
+            <i class="bi bi-gear fs-5"></i>
+          </a>
         </div>
 
-        <!-- Foto de Perfil -->
-        <div class="profile-photo">
+        <!-- Foto do perfil (só desktop) -->
+        <div class="profile-photo ms-3 d-none d-md-block">
           <a href="profile.html">
-            <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
-              class="img-fluid rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+            <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil" class="rounded-circle"
+              style="width: 40px; height: 40px; object-fit: cover;">
           </a>
+        </div>
+
+        <!-- Hambúrguer + Dropdown (Mobile) -->
+        <div class="d-md-none">
+          <div class="nav-links-container me-3">
+            <button class="hamburger-btn d-flex align-items-center justify-content-center" id="hamburgerBtn">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Dropdown -->
+        <div class="mobile-menu-dropdown" id="mobileMenuDropdown">
+          <div class="mobile-menu-content">
+            <a href="#" class="nav-link">Dashboard</a>
+            <a href="#" class="nav-link">Ranking</a>
+            <a href="#" class="nav-link">Avaliações</a>
+            <a href="#" class="nav-link">Missões</a>
+            <a href="#" class="nav-link">Performance</a>
+            <a href="#" class="nav-link">Conquistas</a>
+            <a href="#" class="nav-link">Prêmios</a>
+            <a href="#" class="nav-link">Estatísticas</a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <!-- Conteúdo principal -->
-    <main class="container-fluid mt-1">
+
+    <main class="container-fluid">
       <div class="row g-4 m-1">
         <div class="col-lg-12">
-          <div class="profile-card d-flex align-items-center p-4 rounded-4">
+          <div class="profile-card d-flex align-items-center p-4 rounded-4 shadow-sm flex-wrap">
 
-            <!-- Foto -->
-            <div class="profile-photo-large me-3">
+            <div class="profile-photo-large me-4 mb-3 mb-md-0">
               <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
-                class="img-fluid rounded-4" style="width: 300px; height: 200px; object-fit: cover;">
+                class="img-fluid rounded-4 shadow"
+                style="height: 220px; object-fit: cover; width: 100%; max-width: 220px;">
             </div>
 
-            <!-- Texto e Estatísticas -->
             <div class="flex-grow-1">
               <h2>Bem vindo, <span id="userName">Usuário(a)</span>!</h2>
               <p class="mb-3">Seu desempenho atual:</p>
-
-              <!-- Estatisticas lado a lado -->
               <div class="stats-container">
                 <div class="stat text-center">
                   <div class="percentage">25%</div>
                   <div class="title">Vendas</div>
                 </div>
-
                 <div class="stat text-center">
                   <div class="percentage">40%</div>
                   <div class="title">Produtividade</div>
                 </div>
-
                 <div class="stat text-center">
                   <div class="percentage">60%</div>
                   <div class="title">Qualidade</div>
                 </div>
               </div>
 
-              <!-- Botão abaixo das estatísticas -->
-              <div class="profile-btn mt-3">
-                <a href="profile.html" class="btn-profile">Ver Perfil Completo</a>
-              </div>
+              <a href="profile.html" class="btn rounded-3">Ver Perfil Completo</a>
             </div>
 
-            <!-- Círculo de Pontuação -->
-            <div class="progress-circle ms-auto">
-              <svg class="circle" width="160" height="160">
-                <!-- Circulo de fundo-->
-                <circle class="bg" cx="80" cy="80" r="70" />
-                <!-- Circulo de progresso-->
-                <circle class="progress" cx="80" cy="80" r="70" />
+            <div class="progress-circle ms-auto text-center position-relative" style="width: 220px; height: 220px;">
+              <svg class="circle" width="220" height="220">
+                <circle class="bg" cx="110" cy="110" r="95" />
+                <circle class="progress" cx="110" cy="110" r="95" />
               </svg>
-
-              <div class="circle-content">
-                <div class="points">370</div>
-                <div class="goal">370 / 1700</div>
+              <div class="circle-content position-absolute top-50 start-50 translate-middle text-center">
+                <div class="points fw-bold fs-3">370</div>
+                <div class="goal small text-muted">370 / 1700</div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
 
-      <!-- Linha de cards -->
+
       <div class="row g-4 m-1">
-        <!-- Ranking -->
         <div class="col-md-4">
           <div class="info-card p-3 rounded-4 d-flex align-items-center">
             <div class="icon-square">
@@ -161,7 +169,6 @@
           </div>
         </div>
 
-        <!-- Avaliações -->
         <div class="col-md-4">
           <div class="info-card p-3 rounded-4 d-flex align-items-center">
             <div class="icon-square">
@@ -174,7 +181,6 @@
           </div>
         </div>
 
-        <!-- Missões -->
         <div class="col-md-4">
           <div class="info-card p-3 rounded-4 d-flex align-items-center">
             <div class="icon-square">
@@ -189,24 +195,67 @@
       </div>
 
       <div class="row g-4 m-1">
-        <!-- Card Motivacional -->
+        <div class="col-lg-4">
+          <div class="card daily-goal-card rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="daily-goal-title mb-3 text-center">
+                <i class="bi bi-brightness-alt-high-fill"></i> Objetivo do Dia
+              </h4>
+              <p class="goal-description mb-3">
+                <i class="bi bi-bullseye me-2 text-danger"></i>
+                <span id="dailyGoalText" class="fw-bold">Finalizar 3 tarefas-chave do dia</span>
+              </p>
+
+              <ul class="task-list list-unstyled">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Revisar Pedidos</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Atender X clientes</li>
+                <li><i class="bi bi-circle text-secondary me-2"></i> Revisar Depósito</li>
+              </ul>
+
+              <div class="progress mb-3" style="height: 25px;">
+                <div id="dailyGoalProgress" class="progress-bar bg-success" role="progressbar" style="width: 66%;"
+                  aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">2/3
+                  Concluídas</div>
+              </div>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="streak-section text-center">
+              <h5 class="fw-bold mb-3">🔥 Sequência de Sucesso (Streak) 🔥</h5>
+
+              <div class="streak-box p-3 rounded-3 d-inline-flex align-items-center bg-streak">
+                <i class="bi bi-award-fill text-warning fs-3 me-3"></i>
+                <div>
+                  <span class="fs-4 fw-bold text-dark" id="streakCount">4 Dias Completos</span>
+                  <small class="d-block text-muted">Você está quase lá!</small>
+                </div>
+              </div>
+
+              <p class="mt-2 mb-0">
+                <small class="text-muted fw-bold">Próximo Nível: 5 Dias! (+50 Pontos Bônus)</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
         <div class="col-lg-8">
-          <div class="card motivational-card rounded-4 p-4">
+          <div class="card motivational-card rounded-4 p-4 h-100">
             <h4 class="motivational-title mb-4 text-center">Dicas de Performance</h4>
 
-            <!-- Tópico Bom -->
             <div class="topic good mb-3">
               <i class="bi bi-check-circle-fill me-2"></i>
               Atendimento ao cliente exemplar
             </div>
             <h5 class="motivational-subtitle mb-2">Continue evoluindo!</h5>
             <p class="motivational-text mb-3">
-              Cada ponto conquistado te aproxima do topo. Não desista, mantenha o foco nas metas e veja sua
+              Cada ponto conquistado te aproxima do topo. Não desista, mantenha o foco nas metas e veja
+              sua
               performance
               crescer!
             </p>
 
-            <!-- Tópicos a melhorar -->
             <div class="topic to-improve mb-2">
               <i class="bi bi-exclamation-circle-fill me-2"></i>
               Aumentar a taxa de conversão de vendas
@@ -221,59 +270,74 @@
             </div>
 
             <div class="d-flex justify-content-center">
-              <button class="btn btn-outline-dark">Ver Dicas de Melhoria</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card achievements-card rounded-4 p-4">
-            <h4 class="achievements-title text-center mb-3">Conquistas</h4>
-
-            <div class="achievements-list">
-              <div class="achievement good d-flex align-items-center mb-3">
-                <div class="icon-box bg-warning text-white me-3">
-                  <i class="bi bi-trophy-fill"></i>
-                </div>
-                <div>
-                  <span class="achievement-title">Primeira Venda Concluída</span>
-                  <div class="achievement-status text-success">✓ Concluído</div>
-                </div>
-              </div>
-
-              <div class="achievement good d-flex align-items-center mb-3">
-                <div class="icon-box bg-primary text-white me-3">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div>
-                  <span class="achievement-title">Top Vendas Mensais</span>
-                  <div class="achievement-status text-success">✓ Concluído</div>
-                </div>
-              </div>
-
-              <div class="achievement to-improve d-flex align-items-center mb-3">
-                <div class="icon-box bg-danger text-white me-3">
-                  <i class="bi bi-flag-fill"></i>
-                </div>
-                <div>
-                  <span class="achievement-title">Missão Semanal Completa</span>
-                  <div class="achievement-status text-warning">⌛ Pendente</div>
-                </div>
-              </div>
-
-              <div class="achievement good d-flex align-items-center mb-3">
-                <div class="icon-box bg-success text-white me-3">
-                  <i class="bi bi-heart-fill"></i>
-                </div>
-                <div>
-                  <span class="achievement-title">Feedback Positivo de Cliente</span>
-                  <div class="achievement-status text-success">✓ Concluído</div>
-                </div>
-              </div>
+              <button class="btn">Ver Dicas de Melhoria</button>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="row g-4 m-1">
+        <div class="col-lg-12">
+          <div class="card achievements-card rounded-4 p-4 w-100 h-100 d-flex flex-column">
+            <h4 class="achievements-title text-center mb-3">Conquistas Recentes</h4>
+
+            <div class="row g-3 m-1 achievements-list justify-content-center">
+              <div class="col-12 col-sm-6 col-md-3">
+                <div class="achievement good d-flex align-items-center p-3 rounded-3">
+                  <div class="icon-box bg-warning text-white me-3">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <div>
+                    <span class="achievement-title">Primeira Venda</span>
+                    <div class="achievement-status text-success">✓ Concluído</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                <div class="achievement good d-flex align-items-center p-3 rounded-3">
+                  <div class="icon-box bg-primary text-white me-3">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div>
+                    <span class="achievement-title">Top Vendas Mensais</span>
+                    <div class="achievement-status text-success">✓ Concluído</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                <div class="achievement to-improve d-flex align-items-center p-3 rounded-3">
+                  <div class="icon-box bg-danger text-white me-3">
+                    <i class="bi bi-flag-fill"></i>
+                  </div>
+                  <div>
+                    <span class="achievement-title">Missão Semanal</span>
+                    <div class="achievement-status text-warning">⌛ Pendente</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                <div class="achievement good d-flex align-items-center p-3 rounded-3">
+                  <div class="icon-box bg-success text-white me-3">
+                    <i class="bi bi-heart-fill"></i>
+                  </div>
+                  <div>
+                    <span class="achievement-title">Feedback Positivo</span>
+                    <div class="achievement-status text-success">✓ Concluído</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-3">
+              <a href="#" class="btn">Ver Todas as Conquistas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <div class="row g-4 m-1">
         <div class="col-lg-6">
@@ -282,10 +346,20 @@
               <i class="bi bi-bar-chart-fill me-2"></i> Ranking - Top 3
             </h4>
 
+            <div class="ranking-purpose-info mt-3 p-3 rounded-3 bg-primary-light">
+              <p class="mb-0 text-muted">
+                O ranking mede a sua performance geral em Vendas, Produtividade e Qualidade. Ficar
+                no Top 3
+                garante um reconhecimento especial no ciclo e acesso prioritário aos prêmios
+                mais valiosos.
+              </p>
+            </div>
+
             <div class="flex-grow-1 d-flex flex-column justify-content-center">
-              <div class="row justify-content-center align-items-end podium">
+
+              <div class="row justify-content-center align-items-end podium mb-4">
                 <div class="col-4">
-                  <div class="position-box second rounded-4 p-3">
+                  <div class="position-box second rounded-4 p-3 bg-secondary-light">
                     <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-2" width="80"
                       height="80" alt="2º Lugar">
                     <h6 class="fw-bold">2º Lugar</h6>
@@ -295,7 +369,7 @@
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="position-box first rounded-4 p-3">
+                  <div class="position-box first rounded-4 p-3 bg-primary-dark">
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-2" width="100"
                       height="100" alt="1º Lugar">
                     <h6 class="fw-bold">1º Lugar</h6>
@@ -305,20 +379,21 @@
                   </div>
                 </div>
                 <div class="col-4">
-                  <div class="position-box third rounded-4 p-3">
+                  <div class="position-box third rounded-4 p-3 bg-tertiary-light">
                     <img src="https://randomuser.me/api/portraits/men/85.jpg" class="rounded-circle mb-2" width="80"
                       height="80" alt="3º Lugar">
                     <h6 class="fw-bold">3º Lugar</h6>
-                    <i class="bi bi-trophy text-warning fs-3"></i>
+                    <i class="bi bi-trophy text-tertiary fs-3"></i>
                     <p class="mt-2 mb-0">Carlos</p>
                     <small class="fw-bold">1320 pts</small>
                   </div>
                 </div>
               </div>
+
             </div>
 
             <hr class="my-4">
-            <a href="#" class="btn btn-profile w-100 mt-auto">
+            <a href="#" class="btn w-100 mt-auto">
               Ver Ranking Completo
             </a>
           </div>
@@ -327,44 +402,67 @@
         <div class="col-lg-6 d-flex">
           <div class="card voting-card rounded-4 p-4 text-center w-100 h-100 d-flex flex-column">
             <h4 class="voting-title mb-4 fw-bold text-primary">
-              <i class="bi bi-award-fill me-2"></i> Prêmios mais Votados
+              <i class="bi bi-award-fill me-2"></i> Prêmios Mais Desejados
             </h4>
 
-            <div class="flex-grow-1 d-flex flex-column justify-content-center">
-              <p class="voting-text">
-                Veja quais prêmios estão ganhando a corrida! Participe da votação no formulário para que o seu
-                favorito
-                suba
-                no ranking.
+            <div class="flex-grow-1 d-flex flex-column justify-content-start">
+              <p class="voting-text text-start fw-bold text-dark">
+                🌟 Sua pontuação te leva a estes prêmios!
+              </p>
+              <p class="voting-text text-start mb-4">
+                Veja o que os colegas mais desejam e participe da votação para escolher o prêmio do
+                próximo ciclo.
               </p>
 
-              <div class="vote-progress-container mt-4">
-                <div class="vote-item d-flex align-items-center mb-3">
-                  <span class="fw-bold me-3">Viagem Nacional</span>
+              <div class="prize-list text-start">
+
+                <div class="prize-item mb-4">
+                  <div class="d-flex align-items-center mb-1">
+                    <i class="bi bi-airplane-fill fs-4 me-3" style="color: #D98600;"></i>
+                    <div>
+                      <span class="fw-bold">Viagem Nacional</span>
+                      <small class="d-block text-muted">Valor Estimado: R$ 5.000</small>
+                    </div>
+                  </div>
                   <div class="progress w-100" style="height: 25px;">
                     <div class="progress-bar" role="progressbar" style="width: 75%; background-color: #D98600;"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% dos votos</div>
                   </div>
                 </div>
-                <div class="vote-item d-flex align-items-center mb-3">
-                  <span class="fw-bold me-3">Notebook</span>
+
+                <div class="prize-item mb-4">
+                  <div class="d-flex align-items-center mb-1">
+                    <i class="bi bi-laptop-fill fs-4 me-3" style="color: #D93D00;"></i>
+                    <div>
+                      <span class="fw-bold">Notebook de Última Geração</span>
+                      <small class="d-block text-muted">Valor Estimado: R$ 4.000</small>
+                    </div>
+                  </div>
                   <div class="progress w-100" style="height: 25px;">
                     <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #D93D00;"
-                      aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                      aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% dos votos</div>
                   </div>
                 </div>
-                <div class="vote-item d-flex align-items-center mb-3">
-                  <span class="fw-bold me-3">Curso Profissional</span>
+
+                <div class="prize-item mb-4">
+                  <div class="d-flex align-items-center mb-1">
+                    <i class="bi bi-book-fill fs-4 me-3" style="color: #D90032;"></i>
+                    <div>
+                      <span class="fw-bold">Curso Profissional</span>
+                      <small class="d-block text-muted">Valor Estimado: R$ 1.500</small>
+                    </div>
+                  </div>
                   <div class="progress w-100" style="height: 25px;">
                     <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #D90032;"
-                      aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                      aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30% dos votos</div>
                   </div>
                 </div>
+
               </div>
             </div>
 
             <hr class="my-4">
-            <a href="#" class="btn btn-profile w-100 mt-auto">
+            <a href="#" class="btn w-100 mt-auto">
               Acessar Formulário de Votação
             </a>
           </div>
@@ -372,7 +470,97 @@
       </div>
 
       <div class="row g-4 m-1">
-        <!-- Cards de Gráficos -->
+        <div class="col-lg-12">
+          <div class="card social-feed-card rounded-4 p-4 w-100 h-100 d-flex flex-column">
+            <h4 class="feed-title mb-4 fw-bold text-center">
+              <i class="bi bi-megaphone-fill me-2"></i> Feed de Conquistas (Social)
+            </h4>
+
+            <div class="feed-post mb-4 p-3 rounded-3 bg-white border shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João" class="rounded-circle me-3"
+                  style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <p class="mb-0">
+                    <span class="fw-bold text-success">João</span>
+                    <span class="text-dark">acabou de resgatar seu prêmio de **Notebook de Última Geração!** 💻🔥</span>
+                  </p>
+                  <small class="text-muted">Publicado há 5 minutos</small>
+                </div>
+              </div>
+
+              <div class="post-image mb-3 text-center">
+                <img src="https://picsum.photos/id/119/600/400" alt="Foto do Prêmio de João"          
+                  class="img-fluid rounded-3" style="max-height: 350px; object-fit: cover;">
+              </div>
+
+              <div class="post-interactions border-top pt-2">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="likes-count">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    <small class="fw-bold">45 Curtidas</small>
+                  </div>
+                  <div class="comments-count">
+                    <small class="text-muted">8 Comentários</small>
+                  </div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-danger me-2"><i class="bi bi-heart"></i>
+                  Curtir
+                </button>
+                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chat-dots"></i>
+                  Comentar
+                </button>
+
+              </div>
+            </div>
+
+            <div class="feed-post mb-4 p-3 rounded-3 bg-white border shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Maria" class="rounded-circle me-3"  
+                  style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <p class="mb-0">
+                    <span class="fw-bold text-info">Maria</span>
+                    <span class="text-dark">**completou** a **Missão Semanal** de Atendimento ao Cliente. Foco total!
+                      🎯</span>
+                  </p>
+                  <small class="text-muted">Publicado há 2 horas</small>
+                </div>
+              </div>
+
+              <div class="post-interactions border-top pt-2">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="likes-count">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    <small class="fw-bold">12 Curtidas</small>
+                  </div>
+                  <div class="comments-count">
+                    <small class="text-muted">2 Comentários</small>
+                  </div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-danger me-2"><i class="bi bi-heart"></i>
+                  Curtir
+                </button>
+
+                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chat-dots"></i>
+                  Comentar
+                </button>
+
+              </div>
+            </div>
+
+            <div class="text-center mt-3">
+              <a href="#" class="btn">Carregar mais posts</a>
+            </div>  
+                     
+          </div>        
+        </div>       
+      </div>    
+
+      <div class="row g-4 m-1">
+        <!-- Gráfico de Linha -->
         <div class="col-lg-6">
           <div class="card data-card shadow-sm rounded-4 p-4">
             <h5>Vendas R$/Unidades</h5>
@@ -380,23 +568,26 @@
           </div>
         </div>
 
+        <!-- Gráfico Donut -->
         <div class="col-lg-6">
-          <div class="card data-card shadow-sm rounded-4 p-4 align-items-center">
-            <h5>Categorias de Produtos Vendido</h5>
+          <div class="card data-card shadow-sm rounded-4 p-4">
+            <h5>Categorias de Produtos Vendidos</h5>
             <canvas id="donutChart" height="250"></canvas>
           </div>
         </div>
 
+        <!-- Gráfico Barra (Unidades) -->
         <div class="col-lg-6">
           <div class="card data-card shadow-sm rounded-4 p-4">
-            <h5>Vendas mensais (unidades)</h5>
+            <h5>Vendas Mensais (Unidades)</h5>
             <canvas id="barraChart" height="250"></canvas>
           </div>
         </div>
 
+        <!-- Gráfico Barra (R$) -->
         <div class="col-lg-6">
           <div class="card data-card shadow-sm rounded-4 p-4">
-            <h5>Vendas mensais (R$)</h5>
+            <h5>Vendas Mensais (R$)</h5>
             <canvas id="barraChart2" height="250"></canvas>
           </div>
         </div>
@@ -404,9 +595,7 @@
     </main>
   </div>
 
-  <!-- JavaScript-->
   <script src="../js/dashboard.js"></script>
-
 </body>
 
 </html>
