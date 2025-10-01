@@ -56,6 +56,10 @@ function setActiveLink() {
         currentPage = 'performance';
     }
 
+    if (currentPage === 'avaliation') {
+        currentPage = 'avaliacoes';
+    }
+
     // 3. Encontra todos os links da Navbar
     const allLinks = document.querySelectorAll('.top-bar .nav-link');
 

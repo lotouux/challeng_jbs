@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #D93D00;
+    --primary-custom-main: #D93D00;
+    --color-success-soft: #D98600;
+    --color-info-soft: #ffdecc;
+    --color-warning-soft: #ffb380;
+    --color-danger-soft: #D90032;
+    --soft-white: #fbfcfd;
+}
+
+/* ------------------------------------ */
+/* ESTILOS DE ESTATÍSTICAS (COLUNA LATERAL) */
+/* ------------------------------------ */
+
+.text-primary-custom-main {
+    color: var(--primary-custom-main) !important;
+}
+
+/* Bloco da Média de Avaliações */
+.info-card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card p {
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.star-stats .progress {
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Fundo suave da barra */
+    border-radius: 8px;
+}
+
+.star-stats .progress-bar {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.bg-success {
+    background-color: var(--color-success-soft) !important;
+}
+
+.bg-info {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--color-warning-soft) !important;
+}
+
+.bg-danger {
+    background-color: var(--color-danger-soft) !important;
+}
+
+.star-stats .progress-bar.bg-dark {
+    background-color: #777 !important;
+}
+
+
+/* ------------------------------------ */
+/* ESTILOS DA LISTA DE AVALIAÇÕES */
+/* ------------------------------------ */
+
+.review-card {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+
+/* Cores das Bordas Laterais */
+.review-card.border-success {
+    border-left-color: var(--color-success-soft) !important;
+}
+
+.review-card.border-info {
+    border-left-color: var(--primary-color) !important;
+}
+
+.review-card.border-warning {
+    border-left-color: var(--color-warning-soft) !important;
+}
+
+.review-card.border-danger {
+    border-left-color: var(--color-danger-soft) !important;
+}
+
+
+/* Estilo para os Badges de Estrelas */
+.badge.bg-success {
+    background-color: var(--color-success-soft) !important;
+}
+
+.badge.bg-info {
+    background-color: var(--primary-color) !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--color-warning-soft) !important;
+    color: #333 !important;
+
+}
+
+.badge.bg-danger {
+    background-color: var(--color-danger-soft) !important;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: #555;
+}
