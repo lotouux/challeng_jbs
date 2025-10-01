@@ -10,42 +10,8 @@
     <link href="/src/css/conquistas.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="top-bar d-flex justify-content-between align-items-center p-3">
-        <a href="/src/html/dashboard.html" class="navbar-brand">
-            <img src="/src/img/icons/swift_logo.png" alt="Logo Swift" style="width: 100px;">
-        </a>
-        <div class="d-flex align-items-center">
-            <div class="nav-links-container me-4">
-                <div class="nav-links d-none d-md-flex align-items-center">
-                    <a href="/src/html/dashboard.html" class="nav-link px-3 py-2 rounded-pill" data-page="dashboard">Dashboard</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="ranking">Ranking</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="avaliacoes">Avaliações</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="missoes">Missões</a>
-                    <a href="/src/html/performance.html" class="nav-link px-3 py-2 rounded-pill" data-page="performance">Performance</a>
-                    <a href="/src/html/conquistas.html" class="nav-link px-3 py-2 rounded-pill active" data-page="conquistas">Conquistas</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="premios">Prêmios</a>
-                    <a href="#" class="nav-link px-3 py-2 rounded-pill" data-page="estatisticas">Estatísticas</a>
-                </div>
-            </div>
-            <div class="nav-links-container me-3">
-                <a href="#" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center" data-page="notificacoes">
-                    <i class="bi bi-bell fs-5"></i>
-                </a>
-            </div>
-            <div class="nav-links-container me-3">
-                <a href="/src/html/config.html" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center" data-page="configuracoes">
-                    <i class="bi bi-gear fs-5 me-2"></i>
-                    <span>Configurações</span>
-                </a>
-            </div>
-            <div class="profile-photo">
-                <a href="/src/html/profile.html">
-                    <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
-                        class="img-fluid rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
-                </a>
-            </div>
-        </div>
-    </nav>
+
+    <div id="navbar-placeholder"></div>
 
     <main class="container my-5">
         <section class="progress-section text-center mb-5">
@@ -167,5 +133,6 @@
         </section>
     </main>
     <script src="/src/js/conquistas.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
