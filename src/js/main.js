@@ -48,6 +48,14 @@ function setActiveLink() {
         currentPage = 'premios';
     }
 
+    if (currentPage === 'conquista') {
+        currentPage = 'conquistas';
+    }
+
+    if (currentPage === 'performance') {
+        currentPage = 'performance';
+    }
+
     // 3. Encontra todos os links da Navbar
     const allLinks = document.querySelectorAll('.top-bar .nav-link');
 
