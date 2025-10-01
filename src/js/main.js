@@ -31,18 +31,21 @@ function setupMobileMenu() {
 }
 
 function setActiveLink() {
-    // 1. Obtém o nome base do arquivo atual (ex: 'dashboard' de 'dashboard.html')
+    // 1. Obtém o nome base do arquivo atual
     const path = window.location.pathname;
     let currentPage = path.split('/').pop().split('.')[0];
 
-    // Se a página for a raiz (ex: 'index.html' ou URL base), tratamos como 'dashboard'
+    // Se a página for a raiz (ex: 'index.html' ou URL base)
     if (currentPage === '' || currentPage === 'index') {
         currentPage = 'dashboard';
     }
 
-    // 2. Trata o caso especial 'config', pois seu link usa 'configuracoes'
     if (currentPage === 'config') {
         currentPage = 'configuracoes';
+    }
+
+    if (currentPage === 'form') {
+        currentPage = 'premios';
     }
 
     // 3. Encontra todos os links da Navbar
