@@ -46,13 +46,12 @@
         </ul>
 
         <div class="tab-content" id="settingsTabContent">
-
           <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="card p-4 rounded-4 shadow-sm setting-card">
-              <h4 class="card-title fw-bold mb-4">Informações Básicas</h4>
+              <h4 class="card-title fw-bold mb-4 text-primary-custom-main">Informações Básicas</h4>
 
               <div class="d-flex align-items-start flex-column flex-sm-row mb-4">
-                <div class="profile-photo-lg me-4 mb-3 mb-sm-0">
+                <div class="profile-photo-lg me-4 mb-3 mb-sm-0 flex-shrink-0">
                   <img src="https://randomuser.me/api/portraits/women/91.jpg" alt="Foto de Perfil"
                     class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
                 </div>
@@ -68,21 +67,34 @@
                 </div>
               </div>
 
+              <hr class="my-4">
+
               <form>
                 <div class="mb-3">
                   <label for="userName" class="form-label">Nome Completo</label>
-                  <input type="text" class="form-control" id="userName" value="Usuário(a) Exemplo" required>
+                  <input type="text" class="form-control" id="userName" value="Abobrinha da Silva" required>
                 </div>
+
                 <div class="mb-3">
+                  <label for="userRole" class="form-label">Cargo / Departamento</label>
+                  <input type="text" class="form-control" id="userRole" value="Gerente de Vendas">
+                </div>
+
+                <div class="mb-3">
+                  <label for="userBio" class="form-label">Bio / Status</label>
+                  <textarea class="form-control" id="userBio" rows="3">Texto de bio ou status</textarea>
+                  <small class="text-muted">Esta breve descrição será exibida no seu perfil.</small>
+                </div>
+
+                <div class="mb-4">
                   <label for="userEmail" class="form-label">E-mail</label>
-                  <input type="email" class="form-control" id="userEmail" value="usuario@swift.com.br" disabled>
+                  <input type="email" class="form-control" id="userEmail" value="abobrinha@swift.com.br" disabled>
                   <small class="text-muted">O e-mail não pode ser alterado.</small>
                 </div>
-                <div class="mb-4">
-                  <label for="userRole" class="form-label">Cargo / Departamento</label>
-                  <input type="text" class="form-control" id="userRole" value="Vendas - Setor A" disabled>
-                </div>
-                <button type="submit" class="btn btn-primary-custom rounded-pill px-4">Salvar Alterações</button>
+
+                <button type="submit" class="btn btn-primary-custom rounded-pill px-4">
+                  <i class="bi bi-save me-2"></i> Salvar Alterações
+                </button>
               </form>
             </div>
           </div>
