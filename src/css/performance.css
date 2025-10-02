@@ -1,63 +1,71 @@
-
 .performance-chart-card,
 .tips-card {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     border: none;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.performance-chart-card:hover,
-.tips-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.performance-chart-card h5 {
+    color: #343a40;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-.performance-chart-card h5,
+.btn-primary,
+.btn-danger {
+    background-color: #D93D00 !important;
+    border-color: #D93D00 !important;
+    color: #fff !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #495057;
+    --bs-btn-border-color: #ced4da;
+    --bs-btn-bg: #fff;
+    
+    --bs-btn-hover-color: #D93D00;
+    --bs-btn-hover-bg: rgba(217, 61, 0, 0.05);
+    --bs-btn-hover-border-color: #D93D00;
+    --bs-btn-active-bg: #D93D00;
+    --bs-btn-active-border-color: #D93D00;
+    --bs-btn-active-color: #fff;
+}
+
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    background-color: #D93D00 !important;
+    border-color: #D93D00 !important;
+    color: #fff !important;
+    box-shadow: none;
+}
+
 .tips-card h5 {
     color: #D93D00;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
-
-
-#performanceChart {
-    max-height: 400px; 
-    width: 100%; 
-    margin: 0 auto; 
-}
-
 
 .tips-list .list-group-item {
     background-color: transparent !important;
-    border-left: none;
-    border-right: none;
-    border-color: rgba(0, 0, 0, 0.08);
-    color: #555;
-    transition: background-color 0.3s ease;
+    border: none;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 0.95rem;
     font-weight: 500;
 }
 
-.tips-list .list-group-item:hover {
-    background-color: rgba(0, 0, 0, 0.03) !important;
+.tips-list .list-group-item:nth-child(1) {
+    background-color: #e6ffe6 !important;
+}
+
+.tips-list .list-group-item:not(:nth-child(1)) {
+    background-color: #fff8e6 !important;
 }
 
 .tips-list .list-group-item i {
-    font-size: 1.2rem;
-    margin-right: 10px;
-}
-
-.tips-list .bi-check-circle-fill {
-    color: #28a745;
-}
-
-.tips-list .bi-info-circle-fill {
-    color: #ffc107;
-}
-
-.tips-list .bi-x-circle-fill {
-    color: #dc3545;
+    font-size: 1.1rem;
+    margin-right: 8px;
 }
