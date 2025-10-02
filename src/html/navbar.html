@@ -19,10 +19,46 @@
         </div>
 
         <!-- Notificações -->
-        <div class="nav-links-container me-3">
-            <a href="#" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center" data-page="notificacoes">
+        <div class="nav-links-container me-3 dropdown">
+            <a href="#" class="nav-link px-3 py-2 rounded-pill d-flex align-items-center dropdown-toggle"
+                id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-page="notificacoes">
                 <i class="bi bi-bell fs-5"></i>
             </a>
+
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 rounded-4 p-2 notification-menu"
+                aria-labelledby="notificationsDropdown" style="min-width: 300px;">
+
+                <h6 class="dropdown-header fw-bold text-primary-custom-main">Central de Notificações</h6>
+                <div class="dropdown-divider"></div>
+
+                <li>
+                    <a class="dropdown-item notification-item" href="#">
+                        <div class="d-flex">
+                            <i class="bi bi-trophy-fill text-warning me-2"></i>
+                            <div>
+                                <strong class="d-block">Nova Conquista Desbloqueada!</strong>
+                                <small class="text-muted">Você alcançou o distintivo "Rei das Vendas".</small>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item notification-item" href="#">
+                        <div class="d-flex">
+                            <i class="bi bi-graph-up-arrow text-success me-2"></i>
+                            <div>
+                                <strong class="d-block">Meta Diária Alcançada</strong>
+                                <small class="text-muted">Parabéns! Você completou sua meta de 15:00.</small>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-center small text-primary" href="#">Ver todas as notificações</a></li>
+
+            </ul>
         </div>
 
         <!-- Configurações -->

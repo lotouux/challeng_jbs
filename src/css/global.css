@@ -141,6 +141,28 @@ header {
     display: none;
 }
 
+/* ==========================
+   DROPDOWN NA NAVBAR
+========================== */
+
+.nav-links-container.dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+/* Garantir que o dropdown fique acima */
+.dropdown-menu {
+  z-index: 1055 !important; 
+  position: absolute;
+}
+
+.top-bar {
+  position: relative;
+  z-index: 1030;
+}
+
+#notificationsDropdown::after {
+    display: none !important;
+}
 
 
 /* ==========================
