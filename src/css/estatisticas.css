@@ -1,0 +1,13 @@
+.data-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+}
+
+.data-card h5 {
+    align-self: flex-start;
+    text-align: left;
+    margin-bottom: 1rem;
+    color: #D93D00 !important;
+    font-weight: 600;
+}
