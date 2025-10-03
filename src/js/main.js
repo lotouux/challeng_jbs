@@ -40,24 +40,36 @@ function setActiveLink() {
         currentPage = 'dashboard';
     }
 
-    if (currentPage === 'config') {
-        currentPage = 'configuracoes';
+    if (currentPage === 'ranking') {
+        currentPage = 'ranking';
     }
 
-    if (currentPage === 'form') {
-        currentPage = 'premios';
+    if (currentPage === 'avaliation') {
+        currentPage = 'avaliacoes';
     }
 
-    if (currentPage === 'conquista') {
-        currentPage = 'conquistas';
+    if (currentPage === 'missoes') {
+        currentPage = 'missoes';
     }
 
     if (currentPage === 'performance') {
         currentPage = 'performance';
     }
 
-    if (currentPage === 'avaliation') {
-        currentPage = 'avaliacoes';
+    if (currentPage === 'conquista') {
+        currentPage = 'conquistas';
+    }
+
+    if (currentPage === 'form') {
+        currentPage = 'premios';
+    }
+
+    if (currentPage === 'estatisticas') {
+        currentPage = 'estatisticas';
+    }
+
+    if (currentPage === 'config') {
+        currentPage = 'configuracoes';
     }
 
     // 3. Encontra todos os links da Navbar
