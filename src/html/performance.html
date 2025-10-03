@@ -1,57 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Performance</title>
+    <title>Performance - Swift</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+
     <link href="../css/global.css" rel="stylesheet" />
     <link href="../css/performance.css" rel="stylesheet" />
-</head>
-<body>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
     <div id="navbar-placeholder"></div>
 
     <main class="container my-5">
+        <h1 class="mb-4 fw-bold">Performance</h1>
+
         <div class="row g-4">
             <div class="col-lg-8">
                 <div class="card performance-chart-card shadow-sm rounded-4 p-4">
-                    <h5 class="text-center mb-4">Performance de Vendas Anuais</h5>
-                    <canvas id="performanceChart" height="200"></canvas>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-outline-primary active" id="filter-anual"
+                                data-mode="anual">Performance Anual</button>
+
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
+                                    id="filter-mensal" data-bs-toggle="dropdown" aria-expanded="false"
+                                    data-mode="mensal">
+                                    Mensal
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="filter-mensal">
+                                    <li><a class="dropdown-item month-select" href="#" data-month="1">Janeiro</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="2">Fevereiro</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="3">Março</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="4">Abril</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="5">Maio</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="6">Junho</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="7">Julho</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="8">Agosto</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="9">Setembro</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="10">Outubro</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="11">Novembro</a></li>
+                                    <li><a class="dropdown-item month-select" href="#" data-month="12">Dezembro</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
+                                    id="filter-comparativo" data-bs-toggle="dropdown" aria-expanded="false"
+                                    data-mode="comparativo">
+                                    Comparativo
+                                </button>
+                                <div class="dropdown-menu p-3" aria-labelledby="filter-comparativo"
+                                    style="width: 250px;">
+                                    <p class="text-muted small mb-1">Selecione 2 meses para comparar:</p>
+                                    
+                                    <select class="form-select form-select-sm mb-2" id="mes1-comparativo">
+                                        <option value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7" selected>Julho</option> <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                    
+                                    <select class="form-select form-select-sm" id="mes2-comparativo">
+                                        <option value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6" selected>Junho</option> <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                    
+                                    <button class="btn btn-primary btn-sm w-100 mt-2"
+                                        id="apply-comparison">Comparar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h5 class="text-start mb-4 fw-bold" id="chart-title">Resultados Anuais de Performance</h5>
+
+                    <div style="height: 400px; width: 100%;">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
                 </div>
             </div>
+
             <div class="col-lg-4 d-flex">
-                <div class="card tips-card shadow-sm rounded-4 p-4 flex-grow-1 d-flex flex-column justify-content-center">
-                    <h5 class="mb-3">Dicas de Performance</h5>
-                    <ul class="list-group list-group-flush tips-list flex-grow-1 d-flex flex-column justify-content-center">
-                        <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-                            Atendimento ao cliente exemplar
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-                            Produtividade e criatividade nas vendas
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-check-circle-fill me-2 text-success"></i>
-                            Solicita feedbacks dos clientes ativamente
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-info-circle-fill me-2 text-warning"></i>
-                            Colaborar mais com os colegas de equipeContinue evoluindo!
-                        </li>
-                        <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-info-circle-fill me-2 text-warning"></i>
-                            Aumentar a taxa de conversão de vendas
-                        </li>
-                         <li class="list-group-item d-flex align-items-center">
-                            <i class="bi bi-info-circle-fill me-2 text-warning"></i>
-                            Participar mais ativamente das missões semanais
-                        </li>
-                    </ul>
-                </div>
+                <div
+                    class="card tips-card shadow-sm rounded-4 p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="mb-3 text-dark fw-bold">Dicas de Performance</h5>
+                        <p class="text-muted small">Continue evoluindo! Cada ponto conquistado te aproxima do topo. Não
+                            desista, mantenha o foco nas metas e veja sua performance crescer!</p>
+                        <ul class="list-group list-group-flush tips-list mt-3">
+                            <li class="list-group-item d-flex align-items-center py-2" style="background-color: #e6ffe6;">
+                                <i class="bi bi-check-circle-fill me-2 text-success"></i>
+                                Atendimento ao cliente exemplar
+                            </li>
+                            <li class="list-group-item d-flex align-items-center py-2" style="background-color: #fff8e6;">
+                                <i class="bi bi-arrow-up-circle-fill me-2 text-warning"></i>
+                                Aumentar a taxa de conversão de vendas
+                            </li>
+                            <li class="list-group-item d-flex align-items-center py-2" style="background-color: #fff8e6;">
+                                <i class="bi bi-clock-fill me-2 text-warning"></i>
+                                Melhorar o tempo de resposta aos clientes
+                            </li>
+                            <li class="list-group-item d-flex align-items-center py-2" style="background-color: #fff8e6;">
+                                <i class="bi bi-people-fill me-2 text-warning"></i>
+                                Participar mais ativamente das missões semanais
+                            </li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </main>
@@ -59,4 +141,5 @@
     <script src="../js/performance.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>
