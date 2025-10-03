@@ -302,15 +302,130 @@ The **Prizes** page allows employees to vote for their preferred rewards based o
   - Responsive card layout using Bootstrap (`row-cols-1 row-cols-md-2`)
   - Shadowed, rounded cards with clean text
 
+<p align="center">
+  <img src="src/img/preview/form/proposals.png" alt="Prizes / Voting Page" width="700" />
+</p>
+
+
 - **Styling & Interaction**
   - Progress bars for partial voting results
   - Icons for each prize category
   - Centered action buttons for external form access
 
+---
+
+### 8. Settings / Configurações
+
+The **Settings** page allows users to manage their profile, security, and notification preferences. It is divided into three main tabs for easy navigation.
+
+#### Tabs & Features
+
+1. **Profile**
+   - Update profile picture (max 5MB, JPG/PNG)
+   - Edit personal information:
+     - Full name
+     - Role / Department
+     - Bio / Status
+   - View email (non-editable)
+   - Save changes button
+   - Responsive layout with photo and form side-by-side
+
 <p align="center">
-  <img src="src/img/preview/form/proposals.png" alt="Prizes / Voting Page" width="700" />
+  <img src="src/img/preview/conifg/profile_config.png" alt="Profile Settings" width="700" />
 </p>
 
+2. **Security**
+   - Change password:
+     - Current password
+     - New password (min. 8 characters, letters & numbers)
+     - Confirm new password
+   - Two-Factor Authentication (2FA) toggle
+   - Adds an extra security layer to the account
+
+<p align="center">
+  <img src="src/img/preview/conifg/secure_config.png" alt="Profile Settings" width="700" />
+</p>
+
+3. **Notifications**
+   - Email notifications:
+     - Goals & ranking updates
+     - New missions & challenges
+   - In-app notifications:
+     - New achievements
+     - Activity on the social feed
+   - Toggle switches for each notification type
+   - Save preferences button
+
+<p align="center">
+  <img src="src/img/preview/conifg/notifi_config.png" alt="Settings Page" width="700" />
+</p>
+
+#### Styling & Interaction
+- Tabs implemented with Bootstrap nav-tabs
+- Rounded, shadowed cards for each settings section
+- Responsive design for desktop and mobile
+- Clear icons for each tab (Profile, Security, Notifications)
+
+---
+
+### 9. User Profile / Perfil do Usuário
+
+The **User Profile** page provides a comprehensive overview of the user's information, achievements, and activities.
+
+#### Profile Summary
+- Large profile picture with rounded design
+- User information:
+  - Full name
+  - Role / Department
+  - Bio / Status
+- Edit Profile button linking to Settings page
+- Responsive layout: summary on the left, data & activities on the right
+
+#### Progress & Activities
+1. **Sales Progress**
+   - Progress bar showing percentage of sales completed
+   - Next goal displayed below chart
+   - Chart.js used for visualizing progress over time
+
+<p align="center">
+  <img src="src/img/preview/profile/progress_profile.png" alt="User Profile Page" width="700" />
+</p>
+
+2. **Achievements**
+   - Cards for each achievement displayed dynamically via JavaScript
+   - Modal popup for achievement details:
+     - Icon
+     - Title
+     - Description
+     - Date
+
+
+3. **Recent Activity**
+   - List of recent actions such as:
+     - Awards won
+     - Votes cast
+     - Goals reached
+
+<p align="center">
+  <img src="src/img/preview/profile/activity_profile.png" alt="User Profile Page" width="700" />
+</p>
+
+4. **Missions**
+   - Daily, Weekly, and Monthly missions
+   - Completed and pending tasks distinguished with icons
+   - Organized in collapsible sections
+
+<p align="center">
+  <img src="src/img/preview/profile/missions_profile.png" alt="User Profile Page" width="700" />
+</p>
+
+#### Styling & Interaction
+- Rounded, shadowed cards for each section
+- Flexible layout using Bootstrap grid and flex utilities
+- Interactive achievements with modal details
+- Clear visual hierarchy for tasks and progress indicators
+
+---
 
 ## Next Steps
 - Finalize front-end

@@ -1,0 +1,62 @@
+.nav-links-container.dropdown .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Novo Estilo: Animação de Curtida */
+.btn-like {
+    transition: all 0.2s ease;
+}
+
+/* Classe que será adicionada/removida pelo JS */
+.liked .bi-heart {
+    color: #D93D00 !important;
+    /* Cor principal no coração */
+    fill: #D93D00 !important;
+    animation: pulse 0.3s ease-in-out;
+}
+
+.liked .bi-heart-fill {
+    display: inline-block !important;
+    color: #D93D00 !important;
+}
+
+.btn-like .bi-heart-fill {
+    display: none;
+    /* Esconde o coração cheio por padrão */
+}
+
+.btn-like.liked .bi-heart {
+    display: none !important;
+    /* Esconde o coração vazio quando curtido */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para a Coluna Lateral (Tendências) */
+.sidebar-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    border: none;
+    position: sticky;
+    top: 20px;
+}
+
+.trending-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}

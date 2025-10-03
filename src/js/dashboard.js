@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fill: true
             }, {
                 label: 'Unidades Vendidas',
-                data: [50, 65, 55, 70, 80, 90],
+                data: [1500, 2000, 2100, 2500, 2750, 3000],
                 borderColor: 'rgba(73, 73, 73, 1)',
                 backgroundColor: 'rgba(70, 70, 70, 0.2)',
                 tension: 0.4,
@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
@@ -98,13 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 label: 'Unidades Vendidas',
                 data: [50, 65, 55, 70, 80, 90],
                 backgroundColor: '#D93D00',
-                borderColor: '#992c01ff',
-                borderWidth: 1
+                borderColor: 'none',
+                borderRadius: 8
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
@@ -123,13 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 label: 'Vendas (R$)',
                 data: [12000, 15000, 13000, 18000, 20000, 22000],
                 backgroundColor: '#d97b00ff',
-                borderColor: '#915200ff',
-                borderWidth: 1
+                borderColor: 'none',
+                borderRadius: 8
             }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
