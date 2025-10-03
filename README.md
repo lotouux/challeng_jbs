@@ -143,7 +143,59 @@ The system aims to **engage Swift employees** through a gamified environment tha
 
 ---
 
-### 4. Seller Reviews
+### 4. Ranking & Achievements / Ranking e Conquistas
+
+This page allows users to track their **current performance**, view the **general ranking history**, and celebrate their achievements with badges.
+
+---
+
+#### 🏅 1. My Badges / Minhas Insígnias
+- Grid of **achievement badges** with responsive layout.
+- Badges have **different states**:
+  - **Gold:** 🥇 "Rei do Trimestre" — Stayed in Top 3 for 3 consecutive months.
+  - **Silver:** 🥈 "Sequência Top 5" — Maintained Top 5 last month.
+  - **Bronze:** 🥉 "Sequência Top 10" — Maintained Top 10 last month.
+  - **Locked:** 🔒
+    - "Lenda Anual" — Finish the year in 1st place.
+    - "Lenda das Vendas" — Reach 1st place 5 times in a year.
+    - "The Best" — Reach 1st place 10 times in a year.
+- Each badge contains:
+  - Icon
+  - Title
+  - Description
+- Visual differentiation with **gold, silver, bronze, and locked styles**.
+
+---
+
+#### 🏆 2. General Ranking / Ranking Geral
+- **Filters available:**
+  - **Current Ranking** (default active).
+  - **History dropdown** to select previous months (July, August, September 2025).
+- Table of results:
+  - Dynamically loaded via `ranking.js`.
+  - Responsive layout with Bootstrap.
+  - Hover effect for better readability.
+
+---
+
+#### 🎨 Styling & Features
+- Built with **Bootstrap 5** and **Bootstrap Icons**.
+- **Card-based layout** with rounded corners and shadows.
+- Responsive design for desktop and mobile.
+- Interactivity:
+  - Dropdown filters
+  - Dynamic table population via JavaScript (`ranking.js` + `main.js`).
+
+---
+
+<p align="center">
+  <img src="src/img/preview/ranking/ranking.png" alt="Ranking & Achievements Page" width="700" />
+</p>
+
+
+---
+
+### 5. Seller Reviews
 
 - Responsive layout
 - Navbar included via `#navbar-placeholder`
@@ -188,7 +240,64 @@ The system aims to **engage Swift employees** through a gamified environment tha
 
 ---
 
-### 5. Performance Page
+### 6. Missions & Tasks / Missões e Objetivos
+
+This page provides a **Kanban-style board** to manage weekly and monthly goals. Users can **drag and drop mission cards** between columns to track progress and accumulate points for the ranking and rewards.
+
+---
+
+#### 📊 1. Progress Summary
+- Two progress cards:
+  - **Weekly Missions**
+    - Tracks completed vs total weekly missions.
+    - Progress bar with dynamic update (`semanal-progress`).
+  - **Monthly Missions**
+    - Tracks completed vs total monthly missions.
+    - Progress bar with distinct highlight color (`#D98600`).
+- Each card displays:
+  - Title
+  - Counter (`completed / total`)
+  - Percentage in progress bar
+
+---
+
+#### 🗂️ 2. Kanban Board
+The board is divided into three columns:
+
+- **To Do**  
+  - Example: *Atingir 50 Vendas* (Weekly, +50 pts)  
+  - Example: *Feedback Positivo* (Monthly, +150 pts)
+
+- **Doing**  
+  - Example: *Organizar Estoque* (Weekly, +25 pts)
+
+- **Done**  
+  - Example: *Completar Treinamento* (Monthly, +100 pts)
+
+Each **mission card** contains:
+- Title
+- Badge (`Semanal` in blue, `Mensal` in orange)
+- Description
+- Points (`+X Pontos`)
+- Draggable behavior (`draggable="true"`) to move across columns
+
+---
+
+#### ⚙️ Features
+- Built with **Bootstrap 5** and **Bootstrap Icons**.
+- **Sortable.js** integration for drag & drop in Kanban board.
+- Dynamic mission counters and progress bars updated via `missoes.js`.
+- Responsive design with a **three-column layout**.
+
+---
+
+<p align="center">
+  <img src="src/img/preview/mission/mission.png" alt="Missions & Tasks Page" width="700" />
+</p>
+
+---
+
+### 7. Performance Page
 
 This page displays employee performance metrics using **interactive charts** and **tips for improvement**. Users can view annual, monthly, or comparative performance results.
 
@@ -227,7 +336,7 @@ This page displays employee performance metrics using **interactive charts** and
 
 ---
 
-### 6. Achievements Page
+### 8. Achievements Page
 
 The **Achievements** page allows employees to track their achievements within the gamified environment. Users can see which goals have been completed and which are still pending.
 
@@ -262,7 +371,7 @@ The **Achievements** page allows employees to track their achievements within th
 
 ---
 
-### 7. Prizes / Votação de Recompensas
+### 9. Prizes / Votação de Recompensas
 
 The **Prizes** page allows employees to vote for their preferred rewards based on their ranking in the gamified campaign. Users can see the current leaderboard and choose proposals accordingly.
 
