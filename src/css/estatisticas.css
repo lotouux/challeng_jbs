@@ -1,7 +1,8 @@
 .data-card {
     display: flex;
     flex-direction: column;
-    box-sizing: content-box;
+    /* RESPONSIVIDADE: Garante que o box-sizing seja consistente com o Bootstrap */
+    box-sizing: border-box; 
 }
 
 .data-card h5 {
@@ -10,4 +11,27 @@
     margin-bottom: 1rem;
     color: #D93D00 !important;
     font-weight: 600;
+}
+
+/* RESPONSIVIDADE: Container para controlar o tamanho dos gráficos */
+.chart-container {
+    position: relative;
+    width: 100%;
+    flex-grow: 1; /* Faz o container crescer para preencher o card */
+    min-height: 280px; /* Altura mínima para telas pequenas */
+}
+
+/* Centraliza o texto dentro do gráfico de progresso */
+.progress-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-chart-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
 }

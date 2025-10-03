@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: false, // RESPONSIVIDADE: Permite que o CSS controle o tamanho
             scales: {
                 y: { beginAtZero: true }
             },
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: false, // RESPONSIVIDADE: Permite que o CSS controle o tamanho
             plugins: {
                 legend: { position: 'bottom' }
             }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: false, // RESPONSIVIDADE: Permite que o CSS controle o tamanho
             scales: {
                 r: {
                     angleLines: { display: false },
@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const xpNecessario = 10000;
     const progresso = (xpAtual / xpNecessario) * 100;
 
-    // Atualiza o texto abaixo do gráfico
+    // Atualiza o texto DENTRO do gráfico
     const progressText = document.getElementById("progressText");
     if (progressText) {
-        progressText.innerText = `${xpAtual} / ${xpNecessario} XP (${progresso.toFixed(1)}%)`;
+        progressText.innerHTML = `${progresso.toFixed(1)}% <br> <small class="text-muted fw-normal">${xpAtual} / ${xpNecessario} XP</small>`;
     }
 
     const ctxProgress = document.getElementById('progressChart').getContext('2d');
@@ -106,14 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
         data: {
             datasets: [{
                 data: [xpAtual, xpNecessario - xpAtual],
-                backgroundColor: ["#0d6efd", "#e9ecef"],
-                borderWidth: 0
+                backgroundColor: ["#D93D00", "#e9ecef"],
+                borderWidth: 0,
+                borderRadius: 5
             }]
         },
         options: {
-            cutout: "70%",
+            cutout: "80%", // Aumenta o espaço no meio
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: false, // RESPONSIVIDADE: Permite que o CSS controle o tamanho
             plugins: {
                 legend: { display: false },
                 tooltip: { enabled: false }
