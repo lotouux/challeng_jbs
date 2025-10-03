@@ -423,7 +423,38 @@ The **Prizes** page allows employees to vote for their preferred rewards based o
 
 ---
 
-### 8. Settings / Configurações
+## 10. Statistics
+
+The **Statistics page** provides an overview of the user’s progress with cards, interactive charts, and performance comparisons.
+
+### 📊 Info Cards
+- **Total Points**: Shows the accumulated score.
+- **Current General Ranking**: User’s current placement in the global ranking.
+- **Missions Completed**: Number of successfully finished missions.
+
+### 📈 Monthly Points Evolution
+- **Line chart** displaying the progression of user’s points across months.
+- Helps visualize growth and consistency.
+
+### 🥧 Points Sources
+- **Donut chart** showing where the points were earned.
+- Highlights main areas of contribution.
+
+### ⭐ Progress to Next Level
+- Circular progress chart.
+- Textual indicator showing percentage and remaining progress to reach the next level.
+
+### 🎯 Performance vs. Team Average
+- **Radar chart** comparing user’s performance in key areas against the team’s average.
+- Provides context of individual performance relative to peers.
+
+<p align="center">
+  <img src="src/img/preview/statistics/statistics.png" alt="Statistics Page" width="700" />
+</p>
+
+---
+
+### 11. Settings / Configurações
 
 The **Settings** page allows users to manage their profile, security, and notification preferences. It is divided into three main tabs for easy navigation.
 
@@ -477,7 +508,7 @@ The **Settings** page allows users to manage their profile, security, and notifi
 
 ---
 
-### 9. User Profile / Perfil do Usuário
+### 12. User Profile / Perfil do Usuário
 
 The **User Profile** page provides a comprehensive overview of the user's information, achievements, and activities.
 
@@ -537,16 +568,45 @@ The **User Profile** page provides a comprehensive overview of the user's inform
 ---
 
 ## Next Steps
-- Finalize front-end
-- Replace simulated login with real authentication (backend: Python/Flask or Node.js)
-- Add gamification system:
-  - Points for completed goals
-  - Employee ranking
-  - Weekly/monthly challenges
-- Add notifications and user settings
-- Build profile page with customization
+- **Finalize Front-end**
+  - Complete responsive design across all pages
+  - Optimize layout for mobile and desktop
+  - Polish charts, cards, and gamification visual elements
+
+- **Backend & Authentication**
+  - Replace simulated login with real authentication (Python/Flask or Node.js)
+  - Implement secure password storage and user sessions
+  - Integrate role-based access for employees and administrators
+
+- **Gamification System**
+  - Implement points for completed goals, missions, and challenges
+  - Build dynamic **employee ranking** system
+  - Track **weekly and monthly challenges** with progress bars
+  - Unlock badges and achievements automatically based on milestones
+
+- **Statistics & Analytics**
+  - Connect real data to charts (monthly points, progress to next level, performance vs team average)
+  - Enable interactive filtering and drill-downs on performance charts
+  - Track points sources and historical trends
+
+- **Notifications & User Settings**
+  - Email and in-app notifications for achievements, ranking updates, and new missions
+  - Profile customization: avatar, bio, and preferences
+  - Security settings: password change, 2FA, and activity logs
+
+- **Profile & Achievements Page**
+  - Build fully interactive **user profile** page with progress overview
+  - Display recent activity, completed/pending missions, and unlocked achievements
+  - Enable modal popups for detailed achievement info
+
+- **Future Enhancements**
+  - Leaderboards with filtering by department or team
+  - Voting system for prizes and rewards
+  - Integration with internal company APIs for real performance data
+  - Gamification dashboard with insights and tips for improvement
 
 ---
+
 
 ## Contributors
 This project is developed by FIAP students for the JBS/Swift Challenge:

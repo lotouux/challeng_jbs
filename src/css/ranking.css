@@ -1,3 +1,9 @@
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
 /* Seção de Insígnias */
 .insignia-card {
     background-color: rgba(245, 245, 245, 0.8);
@@ -5,8 +11,10 @@
     padding: 1rem;
     border-radius: 12px;
     transition: all 0.3s ease;
-    height: 100%;
     min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
 }
 
 .insignia-card:hover {
@@ -16,7 +24,7 @@
 }
 
 .insignia-icon {
-    flex-shrink: 0; /* Impede que o ícone diminua e force o texto a ocupar seu espaço */
+    flex-shrink: 0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -29,34 +37,41 @@
     background-color: #D93D00;
 }
 
-.insignia-icon.gold { background-color: #D98600; }
-.insignia-icon.silver { background-color: #7d8c99; }
-.insignia-card.locked .insignia-icon { background-color: #6c757d; }
-.insignia-card.locked { opacity: 0.7; }
+.insignia-icon.gold {
+    background-color: #D98600;
+}
+
+.insignia-icon.silver {
+    background-color: #7d8c99;
+}
+
+.insignia-card.locked .insignia-icon {
+    background-color: #6c757d;
+}
+
+.insignia-card.locked {
+    opacity: 0.7;
+}
 
 .insignia-content {
-    flex-grow: 1; 
-    min-width: 0; 
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .insignia-title {
     font-weight: 700;
     color: #333;
     margin-bottom: 0.25rem;
-    white-space: nowrap; 
-    overflow: hidden;    
-    text-overflow: ellipsis; 
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .insignia-description {
     font-size: 0.85rem;
     color: #555;
     margin-bottom: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    white-space: normal; 
+    word-wrap: break-word;
 }
 
 .btn-outline-primary {
@@ -80,11 +95,30 @@
     box-shadow: none;
 }
 
-.table { border-collapse: separate; border-spacing: 0 0.5rem; }
-.table thead th { color: #D93D00; font-weight: 600; border-bottom: 2px solid #ddd; }
-.table tbody tr { background-color: rgba(255, 255, 255, 0.6); transition: background-color 0.2s ease; }
-.table tbody tr:hover { background-color: rgba(255, 230, 217, 0.8) !important; }
-.table td, .table th { border: none; }
+.table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+.table thead th {
+    color: #D93D00;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.table tbody tr {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 230, 217, 0.8) !important;
+}
+
+.table td,
+.table th {
+    border: none;
+}
 
 .user-highlight {
     background-color: #ffe6d9 !important;
@@ -101,4 +135,33 @@
     border-radius: 8px;
     color: #555;
     background-color: #f0f0f0;
+}
+
+@media (max-width: 767.98px) {
+    .insignia-card {
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+
+    .insignia-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        margin-right: 1rem;
+    }
+
+    .insignia-title {
+        font-size: 1rem;
+    }
+
+    .insignia-description {
+        display: none;
+    }
+
+    .insignia-card.locked .insignia-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
